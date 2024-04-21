@@ -4,88 +4,73 @@ const ejs = require('ejs');
 const prettier = require('prettier');
 
 const sourceDir = path.join(__dirname, '..', 'public/ProgrammingVTuberLogos');
-const targetDir = path.join(__dirname, '..', 'src/app/data/brands');
+const targetDir = path.join(__dirname, '..', 'src/data/generated_brands');
 
-// 确保目标文件夹存在
 fs.mkdir(targetDir, { recursive: true }).catch(console.error);
 
-// 读取EJS模板
+
 const template = path.join(__dirname, "templates/brand.ejs");
+const indexTemplate = path.join(__dirname, "templates/index.ejs");
 
-// fs.readdir(sourceDir, (err, brands) => {
-//     if (err) {
-//         console.error('Error reading source directory:', err);
-//         return;
-//     }
+function determineLogoType(fileName) {
+    const name = fileName.toLowerCase();
+    if (name.includes('thick')) {
+        return 'thick';
+    } else if (name.includes('shadowedold')) {
+        return 'shadow old';
+    } else if (name.includes('shadow')) {
+        return 'shadow';
+    } else if (name.includes('old')) {
+        return 'old';
+    }
+    return 'default';
+}
 
-//     brands.forEach(brand => {
-
-//         const brandDir = path.join(sourceDir, brand);
-//         fs.readdir(brandDir, (err, files) => {
-//             if (err) {
-//                 console.error(`Error reading brand directory (${brand}):`, err);
-//                 return;
-//             }
-
-//             const logos = files.filter(file => path.extname(file).toLowerCase() === '.png')
-//                                .map(file => path.join('path/to/logos', brand, file)); // Adjust logo path as needed
-
-//             const data = {
-//                 logos: logos,
-//                 className: brand,
-//                 name: brand,
-//             };
-
-//             // 渲染EJS模板
-//             const rendered = ejs.render(template, data);
-
-//             // 使用Prettier格式化生成的代码
-//             // prettier.resolveConfig("./.prettierrc").then(options => {
-//             //     const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
-
-//             //     // 写入文件
-//             //     fs.writeFileSync(path.join(targetDir, `${brand}.ts`), formatted);
-//             //     console.log(`${brand}.ts generated successfully.`);
-//             // });
-
-//             fs.writeFileSync(path.join(targetDir, `${brand}.ts`), rendered);
-//         });
-//     });
-// });
-
-
+const validBrands = [];
 async function generateBrandFile(brand) {
     const brandDir = path.join(sourceDir, brand);
     try {
-      const stat = await fs.stat(brandDir);
-      if (!stat.isDirectory()) {
-        return; // 如果不是目录，则跳过
-      }
+        const stat = await fs.stat(brandDir);
+        if (!stat.isDirectory()) {
+            return;
+        }
 
-      const files = await fs.readdir(brandDir);
-      const logos = files.filter(file => path.extname(file).toLowerCase() === '.png')
-                         .map(file => path.join('path/to/logos', brand, file)); // 调整logos路径
+        if (brand[0] === '.') return;
+        validBrands.push(brand);
 
-                         const data = {
-                            logos: logos,
-                            className: brand,
-                            name: brand,
-                        };
+        const files = await fs.readdir(brandDir);
+        let logos = files.filter(file => path.extname(file).toLowerCase() === '.png')
+        .map(file => ({
+            url: path.join('/ProgrammingVTuberLogos/', brand, file),
+            author: 'Aikoyori',
+            type: determineLogoType(file) // 使用函数获取类型
+        }));
 
-      // 渲染EJS模板
-      const rendered = ejs.render(template, data);
+        logos.sort((a, b) => {
+            if (a.type === 'default') return -1; // 如果a是default，它应该排在前面
+            if (b.type === 'default') return 1;  // 如果b是default，a应该排在后面
+            return 0; // 如果都不是default，保持原来的顺序
+        });
 
-      // 使用Prettier格式化生成的代码
-    //   const options = await prettier.resolveConfig("./.prettierrc");
-    //   const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
 
-      // 写入文件
-      await fs.writeFile(path.join(targetDir, `${brand}.ts`), rendered);
-      console.log(`${brand}.ts generated successfully.`);
+        const data = {
+            logos: logos,
+            className: brand,
+            name: brand,
+        };
+        const templateContent = await fs.readFile(template, 'utf8');
+        const rendered = ejs.render(templateContent, data);
+
+        // const options = await prettier.resolveConfig("./.prettierrc");
+        // const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
+
+        await fs.writeFile(path.join(targetDir, `${brand}.ts`), rendered);
+        console.log(`${brand}.ts generated successfully.`);
     } catch (err) {
-      console.error(`Error processing ${brand}:`, err);
+        console.error(`Error processing ${brand}:`, err);
     }
-  }
+}
+
 
   async function generateFiles() {
     try {
@@ -93,9 +78,20 @@ async function generateBrandFile(brand) {
       for (const brand of brands) {
         await generateBrandFile(brand);
       }
+    console.log(brands);
+
+    const indexTemplateContent = await fs.readFile(indexTemplate, 'utf8');
+
+    const rendered = ejs.render(indexTemplateContent, {brands: validBrands});
+    // const options = await prettier.resolveConfig("./.prettierrc");
+    // const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
+    await fs.writeFile(path.join(targetDir, 'index.ts'), rendered);
+    console.log(`index.ts generated successfully.`);
+
     } catch (err) {
       console.error('Error reading source directory:', err);
     }
   }
+
 
   generateFiles();

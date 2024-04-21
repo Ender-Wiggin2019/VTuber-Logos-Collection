@@ -1,0 +1,7 @@
+<% brands.forEach(function(brand) { %>import { <%= brand %> } from "./<%= brand %>";
+<% }); %>
+
+export const ProgrammingVTuberLogos: IBrand[] = [
+<% brands.forEach(function(brand) { %><%= brand %>,
+    <% }); %>
+]

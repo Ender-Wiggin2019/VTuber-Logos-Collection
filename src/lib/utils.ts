@@ -6,14 +6,19 @@ export function cn(...inputs: ClassValue[]) {
 }
 
     // 复制图片URL到剪贴板
-    export const copyToClipboard = async (url: string, onCopied?: () => void) => {
-      try {
-          await navigator.clipboard.writeText(url);
-          onCopied?.();
-      } catch (err) {
-          console.error('Failed to copy: ', err);
-      }
-  };
+      export async function copyToClipboard(src: string) {
+        const img = await fetch(src);
+        const imgBlob = await img.blob();
+        try {
+           navigator.clipboard.write([
+             new ClipboardItem({
+                 'image/png': imgBlob, // change image type accordingly
+             })
+           ]);
+         } catch (error) {
+             console.error(error);
+         }
+     }
 
   // 下载图片
   export const downloadImage = async (url: string) => {
