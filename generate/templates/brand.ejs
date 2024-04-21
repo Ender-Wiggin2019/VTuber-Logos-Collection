@@ -1,0 +1,13 @@
+import { Author, getCredit } from "../credits";
+
+export const <%= className %>: IBrand = {
+    name: '<%= name %>',
+    logos: [
+        <% logos.forEach(function(logo) { %>
+        {
+            url: '<%= logo.url %>',
+            credit: getCredit(Author.<%= logo.author %>),
+        },
+        <% }); %>
+    ]
+}
