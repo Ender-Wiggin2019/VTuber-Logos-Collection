@@ -5,13 +5,13 @@ export const PaperMC: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/PaperMC/PaperMCLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/PaperMC/PaperMCLogoShadowed.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogoShadowed.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },

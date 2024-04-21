@@ -5,13 +5,13 @@ export const GodotEngine: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/GodotEngine/GodotLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/GodotEngine/GodotLogoShadow.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogoShadow.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },

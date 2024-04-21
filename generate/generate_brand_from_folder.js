@@ -8,7 +8,6 @@ const targetDir = path.join(__dirname, '..', 'src/data/generated_brands');
 
 fs.mkdir(targetDir, { recursive: true }).catch(console.error);
 
-
 const template = path.join(__dirname, "templates/brand.ejs");
 const indexTemplate = path.join(__dirname, "templates/index.ejs");
 
@@ -41,7 +40,8 @@ async function generateBrandFile(brand) {
         const files = await fs.readdir(brandDir);
         let logos = files.filter(file => path.extname(file).toLowerCase() === '.png')
         .map(file => ({
-            url: path.join('/ProgrammingVTuberLogos/', brand, file),
+            // url: path.join('/ProgrammingVTuberLogos/', brand, file),
+            url: `https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/${brand}/${file}`,
             author: 'Aikoyori',
             type: determineLogoType(file) // 使用函数获取类型
         }));

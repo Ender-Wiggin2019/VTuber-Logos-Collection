@@ -5,13 +5,13 @@ export const ElysiaJS: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/ElysiaJS/ElysiaJSLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/ElysiaJS/ElysiaJSLogoShadowed.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogoShadowed.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },

@@ -5,25 +5,25 @@ export const Bun: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/Bun/BunLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/Bun/BunLogoOld.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoOld.png',
             credit: getCredit(Author.Aikoyori),
             type: 'old',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/Bun/BunLogoShadowed.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowed.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/Bun/BunLogoShadowedOld.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowedOld.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow old',
         },

@@ -5,13 +5,13 @@ export const Kubernetes: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/Kubernetes/kubernetesLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/Kubernetes/kubernetesLogoShadow.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogoShadow.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },

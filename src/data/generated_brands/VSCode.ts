@@ -5,13 +5,13 @@ export const VSCode: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/VSCode/VSCode.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/VSCode/VSCode-Thick.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode-Thick.png',
             credit: getCredit(Author.Aikoyori),
             type: 'thick',
         },

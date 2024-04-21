@@ -5,13 +5,13 @@ export const IntelliJIDEA: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/IntelliJIDEA/IntellijLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/IntellijLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/IntelliJIDEA/intelliJShadow.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/intelliJShadow.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },

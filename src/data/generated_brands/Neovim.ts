@@ -5,13 +5,13 @@ export const Neovim: IBrand = {
     logos: [
         
         {
-            url: '/ProgrammingVTuberLogos/Neovim/NeovimLogo.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimLogo.png',
             credit: getCredit(Author.Aikoyori),
             type: 'default',
         },
         
         {
-            url: '/ProgrammingVTuberLogos/Neovim/NeovimShadowed.png',
+            url: 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimShadowed.png',
             credit: getCredit(Author.Aikoyori),
             type: 'shadow',
         },
