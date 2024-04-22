@@ -1,5 +1,6 @@
-import { PizzaHut } from "./PizzaHut";
+// import { OBS } from "./OBS";
 
 export const FindViaTwitterLogos: IBrand[] = [
-    // PizzaHut,
-]
+  // PizzaHut,
+  // OBS,
+];
