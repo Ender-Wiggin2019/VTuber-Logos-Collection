@@ -7,20 +7,21 @@ const prettier = require('prettier');
 /**
  * Config
  */
-const sourceDir = path.join(__dirname, '..', 'public/ProgrammingVTuberLogos');
-const targetDir = path.join(__dirname, '..', 'src/data/generated_brands');
+const sourceDir = path.join(__dirname, '..', 'public/DownloadedLogos');
+const targetDir = path.join(__dirname, '..', 'src/data/tmp_brands');
 const template = path.join(__dirname, "templates/brand.ejs");
 const indexTemplate = path.join(__dirname, "templates/index.ejs");
 
-const DOWNLOAD_URL = 'https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/';
-const AUTHOR = 'Aikoyori';
-const BRAND_COLLECTION_NAME = 'ProgrammingVTuberLogos'
+const DOWNLOAD_URL = '/DownloadedLogos/';
+const AUTHOR = 'SAWARATSUKI';
+const BRAND_COLLECTION_NAME = 'SAWARATSUKILogos'
 
 
 /**
  * Script
  */
 fs.mkdir(targetDir, { recursive: true }).catch(console.error);
+
 
 function determineLogoType(fileName) {
     const name = fileName.toLowerCase();
@@ -37,37 +38,41 @@ function determineLogoType(fileName) {
 }
 
 const validBrands = [];
+const validBrandClassNames = [];
 async function generateBrandFile(brand) {
-    const brandDir = path.join(sourceDir, brand);
+
+    brandName = brand.replace(/(\.jpg|\.png)$/, '');
+    // const brandDir = path.join(sourceDir, brand);
     try {
-        const stat = await fs.stat(brandDir);
-        if (!stat.isDirectory()) {
-            return;
+        // const stat = await fs.stat(brandDir);
+        // if (!stat.isDirectory()) {
+        //     return;
+        // }
+
+        // if (brand[0] === '.') return;
+        validBrands.push(brandName);
+
+        // const files = await fs.readdir(brandDir);
+        let logos = {
+            url: path.join(DOWNLOAD_URL, brand),
+            // url: `https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/${brand}/${file}`,
+            author: AUTHOR,
+            type: determineLogoType(brand) // 使用函数获取类型
         }
 
-        if (brand[0] === '.') return;
-        validBrands.push(brand);
-
-        const files = await fs.readdir(brandDir);
-        let logos = files.filter(file => path.extname(file).toLowerCase() === '.png')
-        .map(file => ({
-            // url: path.join('/ProgrammingVTuberLogos/', brand, file),
-            url: `${DOWNLOAD_URL}${brand}/${file}`,
-            author: AUTHOR,
-            type: determineLogoType(file) // 使用函数获取类型
-        }));
-
-        logos.sort((a, b) => {
-            if (a.type === 'default') return -1;
-            if (b.type === 'default') return 1;
-            return 0;
-        });
+        // logos.sort((a, b) => {
+        //     if (a.type === 'default') return -1; // 如果a是default，它应该排在前面
+        //     if (b.type === 'default') return 1;  // 如果b是default，a应该排在后面
+        //     return 0; // 如果都不是default，保持原来的顺序
+        // });
 
 
+        const className = brandName.replace(' ', '').replace('.', '');
+        validBrandClassNames.push(className);
         const data = {
-            logos: logos,
-            className: brand,
-            name: brand,
+            logos: [logos],
+            className: className,
+            name: brandName,
         };
         const templateContent = await fs.readFile(template, 'utf8');
         const rendered = ejs.render(templateContent, data);
@@ -75,10 +80,10 @@ async function generateBrandFile(brand) {
         // const options = await prettier.resolveConfig("./.prettierrc");
         // const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
 
-        await fs.writeFile(path.join(targetDir, `${brand}.ts`), rendered);
-        console.log(`${brand}.ts generated successfully.`);
+        await fs.writeFile(path.join(targetDir, `${className}.ts`), rendered);
+        console.log(`${className}.ts generated successfully.`);
     } catch (err) {
-        console.error(`Error processing ${brand}:`, err);
+        console.error(`Error processing ${brandName}:`, err);
     }
 }
 
@@ -93,7 +98,7 @@ async function generateBrandFile(brand) {
 
     const indexTemplateContent = await fs.readFile(indexTemplate, 'utf8');
 
-    const rendered = ejs.render(indexTemplateContent, {name: BRAND_COLLECTION_NAME, brands: validBrands});
+    const rendered = ejs.render(indexTemplateContent, {name: BRAND_COLLECTION_NAME, brands: validBrandClassNames});
     // const options = await prettier.resolveConfig("./.prettierrc");
     // const formatted = prettier.format(rendered, { ...options, parser: "typescript" });
     await fs.writeFile(path.join(targetDir, 'index.ts'), rendered);

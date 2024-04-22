@@ -1,7 +1,7 @@
 export enum Author {
     Aikoyori,
     AisuAsai,
-    sawaratsuki1004
+    SAWARATSUKI
 }
 export const CREDITS: { [key in Author]: ICredit } = {
     [Author.Aikoyori]: {
@@ -13,9 +13,10 @@ export const CREDITS: { [key in Author]: ICredit } = {
         author: 'Aisu Asai',
         twitter: 'https://twitter.com/AisuAsai',
     },
-    [Author.sawaratsuki1004]: {
-        author: 'さわらつき',
+    [Author.SAWARATSUKI]: {
+        author: 'SAWARATSUKI',
         twitter: 'https://twitter.com/sawaratsuki1004',
+        github: 'https://github.com/SAWARATSUKI',
     },
 };
 
