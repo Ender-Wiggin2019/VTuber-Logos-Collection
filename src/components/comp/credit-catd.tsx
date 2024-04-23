@@ -8,7 +8,7 @@ export function CreditCard({ credit }: Props) {
   return (
     <div className="w-full rounded-lg border bg-card text-card-foreground shadow-sm py-2 px-3 text-zinc-500">
       <div className="flex justify-between it">
-        <Link className="hover:underline hover:underline-offset-2" href={credit.twitter || credit.github || ""} rel="noopener noreferrer" target="_blank">
+        <Link className="flex items-center hover:underline hover:underline-offset-2" href={credit.twitter || credit.github || ""} rel="noopener noreferrer" target="_blank">
           @{credit.author}
         </Link>
         <div className="flex space-x-4">
