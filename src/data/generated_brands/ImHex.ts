@@ -6,13 +6,13 @@ export const ImHex: IBrand = {
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGFilled.png",
       credit: getCredit(Author.Aikoyori),
-      type: "default",
+      type: "filled",
     },
 
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBG.png",
       credit: getCredit(Author.Aikoyori),
-      type: "default",
+      type: "svg bg",
     },
 
     {

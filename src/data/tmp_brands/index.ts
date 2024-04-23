@@ -12,7 +12,9 @@ import { Github } from "./Github";
 import { Gitlab } from "./Gitlab";
 import { Golang } from "./Golang";
 import { HTML } from "./HTML";
+import { Haskell } from "./Haskell";
 import { Hono } from "./Hono";
+import { IamProgrammer } from "./IamProgrammer";
 import { JUNIPERTRANS } from "./JUNIPERTRANS";
 import { JavaTransparent } from "./JavaTransparent";
 import { Kotlin } from "./Kotlin";
@@ -22,12 +24,15 @@ import { Nextjs } from "./Nextjs";
 import { Nodejs } from "./Nodejs";
 import { Photoshop } from "./Photoshop";
 import { Python } from "./Python";
+import { Qwik } from "./Qwik";
 import { RStudioTransparent } from "./RStudioTransparent";
+import { RaspberryPi } from "./RaspberryPi";
 import { React } from "./React";
 import { RhineLab } from "./RhineLab";
 import { Rider } from "./Rider";
 import { Ruby } from "./Ruby";
 import { Rust } from "./Rust";
+import { Streamloots } from "./Streamloots";
 import { SwiftTransparent } from "./SwiftTransparent";
 import { Tailwindcss6 } from "./Tailwindcss6";
 import { TeamSpeak } from "./TeamSpeak";
@@ -39,49 +44,58 @@ import { Vite } from "./Vite";
 import { VoiceMod } from "./VoiceMod";
 import { Vue } from "./Vue";
 import { WALLHACK } from "./WALLHACK";
+import { X } from "./X";
 import { htmx } from "./htmx";
 
+
 export const SAWARATSUKILogos: IBrand[] = [
-  Angular,
-  ArchLinux,
-  Astro,
-  C,
-  COBOL,
-  Clion,
-  Cloudflare,
-  Croud,
-  Figma,
-  FlutterTransparent,
-  Github,
-  Gitlab,
-  Golang,
-  HTML,
-  Hono,
-  JUNIPERTRANS,
-  JavaTransparent,
-  Kotlin,
-  LaravelTransparent,
-  MUIT,
-  Nextjs,
-  Nodejs,
-  Photoshop,
-  Python,
-  RStudioTransparent,
-  React,
-  RhineLab,
-  Rider,
-  Ruby,
-  Rust,
-  SwiftTransparent,
-  Tailwindcss6,
-  TeamSpeak,
-  TransparentGNU,
-  UnityBlenderT,
-  VIMTRANS,
-  VRChatTransparent,
-  Vite,
-  VoiceMod,
-  Vue,
-  WALLHACK,
-  htmx,
-];
+    Angular,
+    ArchLinux,
+    Astro,
+    C,
+    COBOL,
+    Clion,
+    Cloudflare,
+    Croud,
+    Figma,
+    FlutterTransparent,
+    Github,
+    Gitlab,
+    Golang,
+    HTML,
+    Haskell,
+    Hono,
+    IamProgrammer,
+    JUNIPERTRANS,
+    JavaTransparent,
+    Kotlin,
+    LaravelTransparent,
+    MUIT,
+    Nextjs,
+    Nodejs,
+    Photoshop,
+    Python,
+    Qwik,
+    RStudioTransparent,
+    RaspberryPi,
+    React,
+    RhineLab,
+    Rider,
+    Ruby,
+    Rust,
+    Streamloots,
+    SwiftTransparent,
+    Tailwindcss6,
+    TeamSpeak,
+    TransparentGNU,
+    UnityBlenderT,
+    VIMTRANS,
+    VRChatTransparent,
+    Vite,
+    VoiceMod,
+    Vue,
+    WALLHACK,
+    X,
+    htmx,
+
+]

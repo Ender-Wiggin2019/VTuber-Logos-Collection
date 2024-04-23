@@ -23,7 +23,7 @@ export default function Home() {
 
   const filteredBrands = search ? results.map((result) => result.item) : BRANDS;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 space-y-4 w-full max-w-7xl">
+    <main className="flex min-h-screen flex-col items-center justify-start p-4 space-y-4 w-full max-w-7xl">
       <div className="flex justify-between items-center w-full space-x-2">
         <SearchBar setSearch={setSearch} />
         <div className="flex space-x-4 text-muted-foreground">
