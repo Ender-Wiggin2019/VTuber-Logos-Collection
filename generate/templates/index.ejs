@@ -1,7 +1,7 @@
-<% brands.forEach(function(brand) { %>import { <%= brand %> } from "./<%= brand %>";
+<% data.forEach(function(d) { %>import { <%= d.brand %> } from "./<%= d.path %>";
 <% }); %>
 
 export const <%= name %>: IBrand[] = [
-<% brands.forEach(function(brand) { %><%= brand %>,
+<% data.forEach(function(d) { %><%= d.brand %>,
     <% }); %>
 ]

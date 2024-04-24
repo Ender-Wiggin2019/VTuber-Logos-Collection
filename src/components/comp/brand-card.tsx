@@ -16,7 +16,6 @@ export function BrandCard({ brand }: BrandCardProps) {
   const [currentLogoIndex, setCurrentLogoIndex] = useState<number>(0);
 
   const currentLogo = brand.logos[currentLogoIndex];
-
   const handleCopy = () => {
     copyToClipboard(currentLogo.url);
     toast("Copied successfully");
@@ -29,7 +28,7 @@ export function BrandCard({ brand }: BrandCardProps) {
       </CardHeader>
       <CardContent className="flex flex-col justify-center items-center space-y-2">
         <div className="h-48 md:h-64">
-          <Image src={currentLogo.url} alt="Brand Logo" width={400} height={400} />
+          <Image src={currentLogo.url} alt={brand.name} width={400} height={400} />
         </div>
         <div className="grid grid-cols-4 gap-2">
           {brand.logos.map((logo, index) => (
@@ -37,7 +36,7 @@ export function BrandCard({ brand }: BrandCardProps) {
               key={index}
               variant="outline"
               size="sm"
-              className={cn("rounded-full text-xs w-20 h-8", { "border-zinc-600": currentLogoIndex === index })}
+              className={cn("rounded-full text-xs min-w-20 h-8 w-full", { "border-zinc-600": currentLogoIndex === index })}
               onClick={() => setCurrentLogoIndex(index)}
             >
               {logo.type || "default"}

@@ -1,8 +1,8 @@
+import { ProgrammingVTuberLogos } from "./ProgrammingVTuberLogos";
+import { ServiceLogos } from "./ServiceLogos";
 import { FindViaTwitterLogos } from "./brands";
-import { ProgrammingVTuberLogos } from "./generated_brands";
-import { SAWARATSUKILogos } from "./tmp_brands";
 
-const BRANDS: IBrand[] = [...ProgrammingVTuberLogos, ...FindViaTwitterLogos, ...SAWARATSUKILogos];
+const BRANDS: IBrand[] = [...ProgrammingVTuberLogos, ...FindViaTwitterLogos, ...ServiceLogos];
 
 BRANDS.sort((a, b) => a.name.localeCompare(b.name));
 

@@ -9,7 +9,10 @@
     "lint": "next lint",
     "format": "prettier --write **/*.{js,jsx,ts,tsx,less,scss}",
     "generate:brand": "node generate/generate_brand_from_folder.js",
-    "generate:download": "node generate/generate_brand_from_download.js"
+    "generate:download": "node generate/generate_brand_from_download.js",
+    "generate:github": "node generate/generate_brand_from_github.js",
+    "generate": "pnpm generate:brand && pnpm format"
+
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.7",
@@ -36,6 +39,7 @@
     "ejs": "^3.1.9",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
+    "node-fetch": "2",
     "postcss": "^8",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.4.1",
