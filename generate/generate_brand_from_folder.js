@@ -23,6 +23,12 @@ function determineLogoType(brand, fileName) {
 
   let rawTag = logoName.replace(brand.toLowerCase(), "");
 
+  /**
+   * Some hard code rules
+   */
+  const filterStrs = ["mirintemplate", "iamprogrammer!", "iamprogrammer", "intellij"];
+  for (const filterStr of filterStrs) rawTag = rawTag.replace(filterStr, "");
+
   const tagMap = new Map([
     ["thick", "thick"],
     ["svgbgshadows", "shadowed"],

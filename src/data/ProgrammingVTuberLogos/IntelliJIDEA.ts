@@ -6,13 +6,13 @@ export const IntelliJIDEA: IBrand = {
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/IntellijLogo.png",
       credit: getCredit(Author.Aikoyori),
-      type: "intellij",
+      type: "default",
     },
 
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/intelliJShadow.png",
       credit: getCredit(Author.Aikoyori),
-      type: "intellijshadow",
+      type: "shadow",
     },
   ],
 };

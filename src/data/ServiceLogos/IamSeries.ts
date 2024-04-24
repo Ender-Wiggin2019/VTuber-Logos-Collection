@@ -6,13 +6,13 @@ export const IamSeries: IBrand = {
     {
       url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamProgrammer!.png",
       credit: getCredit(Author.SAWARATSUKI),
-      type: "iamprogrammer!",
+      type: "default",
     },
 
     {
       url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamProgrammerEnglish.png",
       credit: getCredit(Author.SAWARATSUKI),
-      type: "iamprogrammerenglish",
+      type: "english",
     },
   ],
 };
