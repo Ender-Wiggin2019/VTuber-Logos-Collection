@@ -1,3 +1,4 @@
+import { ICredit } from "@/data/type";
 import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
 

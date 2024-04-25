@@ -1,4 +1,5 @@
 import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const Vue: IBrand = {
   name: "Vue",

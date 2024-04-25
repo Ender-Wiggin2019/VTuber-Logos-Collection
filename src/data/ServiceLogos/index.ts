@@ -1,3 +1,4 @@
+import { IBrand } from "../type";
 import { Angular } from "./Angular";
 import { ArchLinux } from "./ArchLinux";
 import { C } from "./C";

@@ -1,4 +1,5 @@
 import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const IntelliJIDEA: IBrand = {
   name: "IntelliJ IDEA",

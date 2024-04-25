@@ -1,3 +1,4 @@
+import { IBrand } from "@/data/type";
 import { BrandCard } from "./brand-card";
 
 type Props = {

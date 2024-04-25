@@ -1,4 +1,5 @@
 import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const GameChanger: IBrand = {
   name: "GameChanger",

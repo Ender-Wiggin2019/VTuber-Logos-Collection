@@ -6,7 +6,8 @@ import { cn, copyToClipboard, downloadImage } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
-import { CreditCard } from "./credit-catd";
+import { CreditCard } from "./credit-card";
+import { IBrand } from "@/data/type";
 
 type BrandCardProps = {
   brand: IBrand;

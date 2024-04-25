@@ -1,4 +1,5 @@
 import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const VSCode: IBrand = {
   name: "Visual Studio Code",

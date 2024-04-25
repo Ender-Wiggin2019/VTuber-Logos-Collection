@@ -1,4 +1,5 @@
 import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const CCC: IBrand = {
   name: "C,C#,C++",

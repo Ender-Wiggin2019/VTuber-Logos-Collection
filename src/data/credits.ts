@@ -1,3 +1,5 @@
+import { ICredit } from "./type";
+
 export enum Author {
   Aikoyori,
   AisuAsai,

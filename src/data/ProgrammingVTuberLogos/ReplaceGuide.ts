@@ -1,4 +1,4 @@
-import { Author, getCredit } from "../credits";
+import { IBrand } from "../type";
 
 export const ReplaceGuide: IBrand = {
   name: "ReplaceGuide",
