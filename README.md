@@ -29,6 +29,11 @@ pnpm dev
 
 ## TODO
 
-I have create a script `generate_brand_from_folder.js` to generate data from local directories. The next step will be some automation via GitHub Actions or Vercel. If someone is familiar with these processes, PR is absolutely welcome.
+- [ ] GitHub Actions for automation (currently I use `pnpm generate` to generate data)
+- [X] Alias filter such as k8s -> Kubernetes
+- [ ] Author filter
+- [ ] Category filter (programming languages, tools, etc.)
+- [ ] License declaration on each logo
+- [ ] Better UI for the whole page
 
-Cheers!
+Any PR is welcome!

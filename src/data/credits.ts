@@ -5,6 +5,7 @@ export enum Author {
   AisuAsai,
   SAWARATSUKI,
   ENSO,
+  hvpexe,
 }
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
@@ -24,6 +25,10 @@ export const CREDITS: { [key in Author]: ICredit } = {
   [Author.ENSO]: {
     author: "ENSO",
     twitter: "https://twitter.com/Enso_exe",
+  },
+  [Author.hvpexe]: {
+    author: "『Zenith』",
+    github: "https://github.com/hvpexe",
   },
 };
 

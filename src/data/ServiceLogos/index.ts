@@ -11,10 +11,10 @@ import { Cobol } from "./Cobol";
 import { Crowdstrike } from "./Crowdstrike";
 import { FORTRAN } from "./FORTRAN";
 import { Figma } from "./Figma";
-import { FlipperZero } from "./Flipper Zero";
+import { FlipperZero } from "./FlipperZero";
 import { Flutter } from "./Flutter";
-import { Github } from "./Github";
-import { Gitlab } from "./Gitlab";
+import { GitHub } from "./GitHub";
+import { GitLab } from "./GitLab";
 import { Gnuemacs } from "./Gnuemacs";
 import { Go } from "./Go";
 import { Haskell } from "./Haskell";
@@ -70,8 +70,8 @@ export const ServiceLogos: IBrand[] = [
   Figma,
   FlipperZero,
   Flutter,
-  Github,
-  Gitlab,
+  GitHub,
+  GitLab,
   Gnuemacs,
   Go,
   Haskell,
