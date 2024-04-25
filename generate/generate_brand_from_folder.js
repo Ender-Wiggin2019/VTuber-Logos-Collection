@@ -5,17 +5,8 @@ const ejs = require("ejs");
 const prettier = require("prettier");
 const setting = require("./config/setting.json");
 
-console.log(setting);
-
 const template = path.join(__dirname, "templates/brand.ejs");
 const indexTemplate = path.join(__dirname, "templates/index.ejs");
-
-/**
- * Fixes include:
- * - Passing necessary arguments to functions
- * - Moving variables into appropriate scope
- * - Adjusting async flow with await where needed
- */
 
 function determineLogoType(brand, fileName) {
   let logoName = fileName.replace(".png", "").toLowerCase();
@@ -26,7 +17,7 @@ function determineLogoType(brand, fileName) {
   /**
    * Some hard code rules
    */
-  const filterStrs = ["mirintemplate", "iamprogrammer!", "iamprogrammer", "intellij"];
+  const filterStrs = ["mirintemplate", "iamprogrammer!", "iamprogrammer", "intellij", "godot"];
   for (const filterStr of filterStrs) rawTag = rawTag.replace(filterStr, "");
 
   const tagMap = new Map([
@@ -99,8 +90,7 @@ async function generateBrandFile(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTH
     const templateContent = await fs.readFile(template, "utf8");
     const rendered = ejs.render(templateContent, data);
 
-    await fs.writeFile(path.join(targetDir, `${brand}.ts`), rendered);
-    console.log(`${brand}.ts generated successfully.`);
+    await writeFileIfNotExists(targetDir, brand, rendered);
   } catch (err) {
     console.error(`Error processing ${brand}:`, err);
   }
@@ -135,6 +125,18 @@ function convertToValidName(s) {
   }
 
   return validString === "" ? "_default" : validString;
+}
+
+async function writeFileIfNotExists(targetDir, brand, rendered) {
+  const filePath = path.join(targetDir, `${brand}.ts`);
+
+  try {
+    await fs.access(filePath);
+    console.log(`File ${brand} already exists. Skipping.`);
+  } catch (error) {
+    await fs.writeFile(filePath, rendered);
+    console.log(`\x1b[33m${brand} has been written.\x1b[0m`);
+  }
 }
 
 async function run() {

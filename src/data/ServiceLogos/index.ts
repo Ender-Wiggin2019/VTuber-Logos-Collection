@@ -8,7 +8,9 @@ import { Clion } from "./Clion";
 import { Cloudflare } from "./Cloudflare";
 import { Cobol } from "./Cobol";
 import { Crowdstrike } from "./Crowdstrike";
+import { FORTRAN } from "./FORTRAN";
 import { Figma } from "./Figma";
+import { FlipperZero } from "./Flipper Zero";
 import { Flutter } from "./Flutter";
 import { Github } from "./Github";
 import { Gitlab } from "./Gitlab";
@@ -40,6 +42,9 @@ import { Streamloots } from "./Streamloots";
 import { Swift } from "./Swift";
 import { Tailwindcss } from "./Tailwindcss";
 import { Teamspeak } from "./Teamspeak";
+import { Twitter } from "./Twitter";
+import { TypeScript } from "./TypeScript";
+import { Ubuntu } from "./Ubuntu";
 import { UnityBlender } from "./UnityBlender";
 import { Vim } from "./Vim";
 import { Vite } from "./Vite";
@@ -60,7 +65,9 @@ export const ServiceLogos: IBrand[] = [
   Cloudflare,
   Cobol,
   Crowdstrike,
+  FORTRAN,
   Figma,
+  FlipperZero,
   Flutter,
   Github,
   Gitlab,
@@ -92,6 +99,9 @@ export const ServiceLogos: IBrand[] = [
   Swift,
   Tailwindcss,
   Teamspeak,
+  Twitter,
+  TypeScript,
+  Ubuntu,
   UnityBlender,
   Vim,
   Vite,
