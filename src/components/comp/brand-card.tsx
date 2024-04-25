@@ -22,7 +22,7 @@ export function BrandCard({ brand }: BrandCardProps) {
   };
 
   return (
-    <Card className="w-full md:w-[400px] card-container">
+    <Card className="w-full card-container">
       <CardHeader>
         <CardTitle>{brand.name}</CardTitle>
       </CardHeader>
