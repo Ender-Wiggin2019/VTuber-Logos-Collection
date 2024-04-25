@@ -2,6 +2,7 @@ import { Author, getCredit } from "../credits";
 
 export const Ubuntu: IBrand = {
   name: "Ubuntu",
+  aliases: ["linux"],
   logos: [
     {
       url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ubuntu/Ubuntu.png",

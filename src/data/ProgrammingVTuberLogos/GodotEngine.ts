@@ -1,7 +1,7 @@
 import { Author, getCredit } from "../credits";
 
 export const GodotEngine: IBrand = {
-  name: "GodotEngine",
+  name: "Godot Engine",
   logos: [
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogo.png",

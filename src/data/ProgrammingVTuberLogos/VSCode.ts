@@ -1,7 +1,8 @@
 import { Author, getCredit } from "../credits";
 
 export const VSCode: IBrand = {
-  name: "VSCode",
+  name: "Visual Studio Code",
+  aliases: ["vsc", "vscode", "vs code"],
   logos: [
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode.png",

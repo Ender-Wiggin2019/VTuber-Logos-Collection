@@ -1,6 +1,9 @@
+import { Category } from "./categories";
+
 interface IBrand {
   name: string;
   aliases?: string[];
+  categories?: Category[];
   logos: ILogo[];
 }
 

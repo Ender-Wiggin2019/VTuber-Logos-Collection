@@ -1,7 +1,8 @@
 import { Author, getCredit } from "../credits";
 
 export const IntelliJIDEA: IBrand = {
-  name: "IntelliJIDEA",
+  name: "IntelliJ IDEA",
+  aliases: ["JetBrains", "jb"],
   logos: [
     {
       url: "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/IntellijLogo.png",

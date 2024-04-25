@@ -3,7 +3,6 @@
 import { BrandCardList } from "@/components/comp/card-list";
 import { SearchBar } from "@/components/comp/search-bar";
 import { BRANDS } from "@/data/brand";
-import Image from "next/image";
 import { useState } from "react";
 import Fuse from "fuse.js";
 import Link from "next/link";
@@ -12,9 +11,9 @@ import { Github, Twitter } from "lucide-react";
 export default function Home() {
   const [search, setSearch] = useState<string>("");
   const fuseOptions = {
-    keys: ["name", "alias"], // 指定搜索的字段
-    includeScore: true, // 可选，是否包含分数
-    threshold: 0.3, // 搜索结果匹配度的阈值（0为完全匹配，1为完全不匹配）
+    keys: ["name", "aliases"],
+    includeScore: true,
+    threshold: 0.1,
   };
 
   const fuse = new Fuse(BRANDS, fuseOptions);
