@@ -1,4 +1,5 @@
 import { IBrand } from "../type";
+import { _404Notfound } from "./404Notfound";
 import { Angular } from "./Angular";
 import { ArchLinux } from "./ArchLinux";
 import { C } from "./C";
@@ -56,6 +57,7 @@ import { Wallhack } from "./Wallhack";
 import { X } from "./X";
 
 export const ServiceLogos: IBrand[] = [
+  _404Notfound,
   Angular,
   ArchLinux,
   C,
