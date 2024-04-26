@@ -10,11 +10,10 @@ import { Github } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useState } from "react";
 
-type Props ={
+type Props = {
   brands: IBrand[];
-}
-export default function BrandList({brands}: Props) {
-
+};
+export default function BrandList({ brands }: Props) {
   const [search, setSearch] = useState<string>("");
 
   const fuseOptions = {
@@ -29,7 +28,7 @@ export default function BrandList({brands}: Props) {
 
   const filteredBrands = search ? results.map((result) => result.item) : brands;
   return (
-          <main className="flex min-h-screen flex-col items-center justify-start p-4 space-y-4 w-full max-w-7xl">
+    <main className="flex min-h-screen flex-col items-center justify-start p-4 space-y-4 w-full max-w-7xl">
       <div className="flex justify-between items-center w-full space-x-2">
         <SearchBar setSearch={setSearch} />
         <div className="flex space-x-4 text-muted-foreground">
@@ -42,9 +41,7 @@ export default function BrandList({brands}: Props) {
         </div>
       </div>
       <div className="w-full z-10 items-center justify-between text-sm lg:flex">
-
         <BrandCardList brands={filteredBrands} />
-
       </div>
     </main>
   );

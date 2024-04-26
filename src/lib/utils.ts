@@ -43,4 +43,4 @@ export const downloadImage = async (url: string) => {
 export const filterByAuthor = (brands: IBrand[], author: string) => {
   // TODO: since currently each brand class only has one author, it's temporary okay. In the future this part should be improved.
   return brands.filter((brand) => brand.logos.some((logo) => logo.credit.pk === author || author.includes(logo.credit.pk)));
-}
+};

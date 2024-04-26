@@ -27,6 +27,7 @@ import { Java } from "./Java";
 import { Juniper } from "./Juniper";
 import { Kotlin } from "./Kotlin";
 import { Laravel } from "./Laravel";
+import { MSDOS } from "./MS-DOS";
 import { Mui } from "./Mui";
 import { Nextjs } from "./Next.js";
 import { Nodejs } from "./Node.js";
@@ -85,6 +86,7 @@ export const ServiceLogos: IBrand[] = [
   Juniper,
   Kotlin,
   Laravel,
+  MSDOS,
   Mui,
   Nextjs,
   Nodejs,

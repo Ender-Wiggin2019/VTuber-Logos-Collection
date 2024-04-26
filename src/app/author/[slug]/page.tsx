@@ -3,5 +3,5 @@ import { BRANDS } from "@/data/brand";
 import { filterByAuthor } from "@/lib/utils";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  return (<BrandList brands={filterByAuthor(BRANDS, params.slug)}/>);
+  return <BrandList brands={filterByAuthor(BRANDS, params.slug)} />;
 }
