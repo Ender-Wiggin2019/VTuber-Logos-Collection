@@ -16,6 +16,7 @@ export interface ILogo {
 
 export interface ICredit {
   author: string;
+  pk: string;
   twitter?: string;
   github?: string;
 }
