@@ -1,7 +1,7 @@
 "use client";
 
 import { BrandCardList } from "@/components/comp/card-list";
-import { SearchBar } from "@/components/comp/search-bar";
+import { ToolBar } from "@/components/comp/tool-bar";
 import { BRANDS } from "@/data/brand";
 import { IBrand } from "@/data/type";
 import { filterByAuthor } from "@/lib/utils";
@@ -29,9 +29,9 @@ export default function BrandList({ brands }: Props) {
   const filteredBrands = search ? results.map((result) => result.item) : brands;
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-4 space-y-4 w-full max-w-7xl">
-      <div className="flex justify-between items-center w-full space-x-2">
-        <SearchBar setSearch={setSearch} />
-        <div className="flex space-x-4 text-muted-foreground">
+      <div className="flex items-center w-full space-x-2 py-2">
+        <ToolBar setSearch={setSearch} />
+        <div className="flex w-full justify-end space-x-4 text-muted-foreground">
           {/* <Link href="" target="_blank" rel="noopener noreferrer">
               <Twitter />
             </Link> */}
