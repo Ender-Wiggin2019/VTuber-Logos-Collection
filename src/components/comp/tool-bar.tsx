@@ -1,4 +1,3 @@
-
 import { SearchBar } from "@/components/comp/search-bar";
 import { ToTopButton } from "./to-top-button";
 

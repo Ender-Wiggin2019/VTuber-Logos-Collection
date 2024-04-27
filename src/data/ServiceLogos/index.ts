@@ -10,6 +10,7 @@ import { Clion } from "./Clion";
 import { Cloudflare } from "./Cloudflare";
 import { Cobol } from "./Cobol";
 import { Crowdstrike } from "./Crowdstrike";
+import { Discord } from "./Discord";
 import { FORTRAN } from "./FORTRAN";
 import { Figma } from "./Figma";
 import { FlipperZero } from "./FlipperZero";
@@ -50,6 +51,7 @@ import { TypeScript } from "./TypeScript";
 import { Ubuntu } from "./Ubuntu";
 import { UnityBlender } from "./UnityBlender";
 import { Vim } from "./Vim";
+import { VisualStudioCode } from "./VisualStudioCode";
 import { Vite } from "./Vite";
 import { Voicemod } from "./Voicemod";
 import { Vrchat } from "./Vrchat";
@@ -69,6 +71,7 @@ export const ServiceLogos: IBrand[] = [
   Cloudflare,
   Cobol,
   Crowdstrike,
+  Discord,
   FORTRAN,
   Figma,
   FlipperZero,
@@ -109,6 +112,7 @@ export const ServiceLogos: IBrand[] = [
   Ubuntu,
   UnityBlender,
   Vim,
+  VisualStudioCode,
   Vite,
   Voicemod,
   Vrchat,
