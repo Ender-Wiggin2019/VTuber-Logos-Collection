@@ -3,7 +3,7 @@
 import { SearchBar } from "@/components/comp/search-bar";
 import { BRANDS } from "@/data/brand";
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Fuse from "fuse.js";
 import { Bell, CircleUser, Home, LineChart, Menu, Package, Package2, Search, ShoppingCart, Users } from "lucide-react";
 
@@ -22,8 +22,31 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { BrandCardList } from "@/components/comp/card-list";
 import Link from "next/link";
+import { ToolBar } from "@/components/comp/tool-bar";
+import { CollapsibleList } from "@/components/comp/collapsible-list";
+import { FilterContainer } from "@/components/comp/filter-container";
+import { IBrand } from "@/data/type";
 
 export default function Dashboard() {
+  const [brands, setBrands] = useState<IBrand[]>(BRANDS);
+  // 设置过滤函数的状态，初始值是一个不做任何过滤的函数
+  const [filterFunctions, setFilterFunctions] = useState<Map<string, (brands: IBrand[]) => IBrand[]>>(new Map());
+
+  // 使用 useCallback 避免不必要的渲染
+  const onChangeFilter = (key: string, fn: (brands: IBrand[]) => IBrand[]) => {
+    // 使用 setFilterFunctions 更新 filterFunctions
+    setFilterFunctions((prev) => new Map(prev.set(key, fn)));
+  };
+
+  // 应用过滤函数
+  const filterFunction = useCallback(
+    (brands: IBrand[]) => {
+      // 通过 reduce 将所有过滤函数应用到 brands 上
+      return Array.from(filterFunctions.values()).reduce((prev, fn) => fn(prev), brands);
+    },
+    [filterFunctions]
+  );
+  const firstFilteredBrands = filterFunction(brands);
   const [search, setSearch] = useState<string>("");
   const fuseOptions = {
     keys: ["name", "aliases"], // 指定搜索的字段
@@ -31,11 +54,13 @@ export default function Dashboard() {
     threshold: 0, // 搜索结果匹配度的阈值（0为完全匹配，1为完全不匹配）
   };
 
-  const fuse = new Fuse(BRANDS, fuseOptions);
+  const fuse = new Fuse(firstFilteredBrands, fuseOptions);
 
   const results = fuse.search(search);
 
-  const filteredBrands = search ? results.map((result) => result.item) : BRANDS;
+  const filteredBrands = search ? results.map((result) => result.item) : brands;
+
+  console.log(brands);
 
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
@@ -62,6 +87,8 @@ export default function Dashboard() {
                 Orders
                 <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">6</Badge>
               </Link>
+              <FilterContainer brands={filteredBrands} onChangeFilter={onChangeFilter} />
+
               <Link href="#" className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary">
                 <Package className="h-4 w-4" />
                 Products{" "}
@@ -115,10 +142,11 @@ export default function Dashboard() {
                   Orders
                   <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">6</Badge>
                 </Link>
-                <Link href="#" className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground">
+                {/* <Link href="#" className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground">
                   <Package className="h-5 w-5" />
                   Products
-                </Link>
+                </Link> */}
+                <FilterContainer brands={filteredBrands} onChangeFilter={onChangeFilter} />
                 <Link href="#" className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground">
                   <Users className="h-5 w-5" />
                   Customers
@@ -143,13 +171,14 @@ export default function Dashboard() {
               </div>
             </SheetContent>
           </Sheet>
-          <div className="w-full flex-1">
-            <form>
+          <div className=" w-full">
+            {/* <form>
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input type="search" placeholder="Search products..." className="w-full appearance-none bg-background pl-8 shadow-none md:w-2/3 lg:w-1/3" />
               </div>
-            </form>
+            </form> */}
+            <ToolBar setSearch={setSearch} />
           </div>
           {/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -172,7 +201,7 @@ export default function Dashboard() {
           <div className="flex items-center">
             <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
           </div>
-          <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1">
+          <div className="flex flex-1 items-start justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1">
             <div className="w-full z-10 items-center justify-between text-sm lg:flex overflow-y-auto">
               <BrandCardList brands={filteredBrands} />
             </div>

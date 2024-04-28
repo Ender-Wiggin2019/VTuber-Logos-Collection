@@ -1,4 +1,4 @@
-export enum Category {
+export enum BrandCategory {
   LANGUAGE = "Programming Language",
   DESIGN = "Design Tools",
   OS = "Operating System",
