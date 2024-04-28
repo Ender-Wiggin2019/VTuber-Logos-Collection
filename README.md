@@ -32,7 +32,7 @@ First, run the development server:
 pnpm dev
 ```
 
-P.S. Please ensure that your Node.js version is greater than v18.17.0.
+P.S. Ensure your Node.js version is > v18.17.0. Consider using NVM for easy version management.
 
 ## TODO
 
