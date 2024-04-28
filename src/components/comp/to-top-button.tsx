@@ -14,7 +14,7 @@ export function ToTopButton() {
   };
 
   return (
-    <Button variant="default" size="default" className={cn("rounded-md ml-4")} onClick={toTop}>
+    <Button variant="default" size="default" className={cn("rounded-md")} onClick={toTop}>
       {"Top"}
     </Button>
   );
