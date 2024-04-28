@@ -19,12 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <Script defer src="https://umami.ender-wiggin.com/script.js" data-website-id="3e6f233a-9fc6-4023-9bbf-0ccb037b7e6f"></Script>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

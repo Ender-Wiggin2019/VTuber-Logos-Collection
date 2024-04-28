@@ -12,7 +12,7 @@ export function ToolBar({ setSearch }: Props) {
     <div className="fixed flex items-center z-50 space-x-4">
       <SearchBar setSearch={setSearch} />
       <ToTopButton />
-      <DarkModeToggle/>
+      <DarkModeToggle />
     </div>
   );
 }

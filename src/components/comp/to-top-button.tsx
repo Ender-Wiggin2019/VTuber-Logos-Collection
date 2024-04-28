@@ -16,7 +16,7 @@ export function ToTopButton() {
 
   return (
     <Button variant="default" size="icon" onClick={toTop}>
-      <ArrowUp className="h-[1.2rem] w-[1.2rem]"/>
+      <ArrowUp className="h-[1.2rem] w-[1.2rem]" />
       <span className="sr-only">Go To Top</span>
     </Button>
   );
