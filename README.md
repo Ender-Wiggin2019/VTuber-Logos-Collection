@@ -32,6 +32,8 @@ First, run the development server:
 pnpm dev
 ```
 
+P.S. Ensure your Node.js version is > v18.17.0. Consider using NVM for easy version management.
+
 ## TODO
 
 - [ ] GitHub Actions for automation (currently I use `pnpm generate` to generate data)
