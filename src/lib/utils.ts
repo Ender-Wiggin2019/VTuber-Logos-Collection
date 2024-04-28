@@ -1,3 +1,4 @@
+import { IBrand } from "@/data/type";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -37,4 +38,9 @@ export const downloadImage = async (url: string) => {
   } catch (err) {
     console.error("Download failed:", err);
   }
+};
+
+export const filterByAuthor = (brands: IBrand[], author: string) => {
+  // TODO: since currently each brand class only has one author, it's temporary okay. In the future this part should be improved.
+  return brands.filter((brand) => brand.logos.some((logo) => logo.credit.pk === author || author.includes(logo.credit.pk)));
 };
