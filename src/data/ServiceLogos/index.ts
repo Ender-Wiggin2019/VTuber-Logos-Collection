@@ -1,11 +1,15 @@
 import { IBrand } from "../type";
+import { _403Forbidden } from "./403Forbidden";
 import { _404Notfound } from "./404Notfound";
+import { _418Imateapot } from "./418Iamateapot";
+import { _503ServiceUnavailablepng } from "./503ServiceUnavailable.png";
 import { Angular } from "./Angular";
 import { ArchLinux } from "./ArchLinux";
 import { C } from "./C";
 import { C0 } from "./C#";
 import { C1 } from "./C++";
 import { CCC } from "./C,C#,C++";
+import { CSS } from "./CSS完全に理解した";
 import { Clion } from "./Clion";
 import { Cloudflare } from "./Cloudflare";
 import { Cobol } from "./Cobol";
@@ -25,9 +29,12 @@ import { Html } from "./Html";
 import { Htmx } from "./Htmx";
 import { IamSeries } from "./IamSeries";
 import { Java } from "./Java";
+import { Julia } from "./Julia";
 import { Juniper } from "./Juniper";
+import { KernelPanic } from "./Kernel Panic";
 import { Kotlin } from "./Kotlin";
 import { Laravel } from "./Laravel";
+import { Lisp } from "./Lisp";
 import { MSDOS } from "./MS-DOS";
 import { Mui } from "./Mui";
 import { Nextjs } from "./Next.js";
@@ -51,6 +58,7 @@ import { TypeScript } from "./TypeScript";
 import { Ubuntu } from "./Ubuntu";
 import { UnityBlender } from "./UnityBlender";
 import { Vim } from "./Vim";
+import { VisualStudio } from "./VisualStudio";
 import { VisualStudioCode } from "./VisualStudioCode";
 import { Vite } from "./Vite";
 import { Voicemod } from "./Voicemod";
@@ -60,13 +68,17 @@ import { Wallhack } from "./Wallhack";
 import { X } from "./X";
 
 export const ServiceLogos: IBrand[] = [
+  _403Forbidden,
   _404Notfound,
+  _418Imateapot,
+  _503ServiceUnavailablepng,
   Angular,
   ArchLinux,
   C,
   C0,
   C1,
   CCC,
+  CSS,
   Clion,
   Cloudflare,
   Cobol,
@@ -86,9 +98,12 @@ export const ServiceLogos: IBrand[] = [
   Htmx,
   IamSeries,
   Java,
+  Julia,
   Juniper,
+  KernelPanic,
   Kotlin,
   Laravel,
+  Lisp,
   MSDOS,
   Mui,
   Nextjs,
@@ -112,6 +127,7 @@ export const ServiceLogos: IBrand[] = [
   Ubuntu,
   UnityBlender,
   Vim,
+  VisualStudio,
   VisualStudioCode,
   Vite,
   Voicemod,

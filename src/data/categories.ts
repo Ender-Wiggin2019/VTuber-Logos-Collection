@@ -6,5 +6,6 @@ export enum BrandCategory {
   DEV_TOOLS = "Develop Tools",
   INFRA = "Infrastructure",
   IDE = "IDE",
+  STATUS_CODE = "Status Code",
   OTHER = "Other",
 }

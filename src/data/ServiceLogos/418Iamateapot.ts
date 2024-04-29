@@ -1,14 +1,14 @@
-import { BrandCategory } from "../categories";
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
+import { BrandCategory } from "../categories";
 
-export const _404Notfound: IBrand = {
-  name: "404Notfound",
+export const _418Imateapot: IBrand = {
+  name: "418 I'm a teapot",
   aliases: [],
   categories: [BrandCategory.STATUS_CODE],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/404Notfound/NotFound.png",
+      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/418I'mateapot/418I'mateapot.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

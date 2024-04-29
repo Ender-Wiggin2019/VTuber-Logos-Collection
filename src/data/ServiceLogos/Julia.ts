@@ -2,12 +2,13 @@ import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
 import { BrandCategory } from "../categories";
 
-export const ArchLinux: IBrand = {
-  name: "Arch Linux",
-  categories: [BrandCategory.OS],
+export const Julia: IBrand = {
+  name: "Julia",
+  aliases: [],
+  categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/ArchLinux/ArchLinux.png",
+      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Julia/Julia.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
