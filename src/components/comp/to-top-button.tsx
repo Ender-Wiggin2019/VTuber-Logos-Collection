@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowUp } from "lucide-react";
 
 export function ToTopButton() {
   const toTop = () => {
@@ -14,8 +15,9 @@ export function ToTopButton() {
   };
 
   return (
-    <Button variant="default" size="default" className={cn("rounded-md ml-4")} onClick={toTop}>
-      {"Top"}
+    <Button variant="default" size="icon" onClick={toTop}>
+      <ArrowUp className="h-[1.2rem] w-[1.2rem]" />
+      <span className="sr-only">Go To Top</span>
     </Button>
   );
 }
