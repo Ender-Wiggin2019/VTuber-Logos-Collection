@@ -1,9 +1,9 @@
-import { Category } from "./categories";
+import { BrandCategory } from "./categories";
 
 export interface IBrand {
   name: string;
   aliases?: string[];
-  categories?: Category[];
+  categories?: BrandCategory[];
   logos: ILogo[];
 }
 
@@ -20,3 +20,18 @@ export interface ICredit {
   twitter?: string;
   github?: string;
 }
+
+export interface IFilterOption {
+  name: string;
+  count?: number;
+}
+export interface IFilter {
+  filterHeader: string;
+  filterIcon?: JSX.Element;
+  filterOptions: IFilterOption[];
+  initOptionNames: string[];
+  // optionMapper: (options: IFilter["filterOptions"]) => string[],
+  onClickOption?: (options: Set<string>) => void;
+}
+
+export type FilterFunctionsMap = Map<string, (brands: IBrand[]) => IBrand[]>;

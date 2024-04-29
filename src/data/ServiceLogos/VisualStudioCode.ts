@@ -1,10 +1,12 @@
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
+import { BrandCategory } from "../categories";
 
 export const VisualStudioCode: IBrand = {
   name: "Visual Studio Code",
   aliases: ["vsc", "vscode", "vs code"],
-  categories: [],
+  categories: [BrandCategory.IDE],
+
   logos: [
     {
       url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/VisualStudioCode/VisualStudioCode.png",
