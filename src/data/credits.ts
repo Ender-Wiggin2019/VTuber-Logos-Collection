@@ -37,7 +37,7 @@ export const CREDITS: { [key in Author]: ICredit } = {
     github: "https://github.com/hvpexe",
   },
   [Author.FurkanKarabudak]: {
-    author: "F u r k a n K a r a b u d a k",
+    author: "FurkanKarabudak",
     pk: "_FrkanKrabudak_",
     twitter: "https://twitter.com/_FrkanKrabudak_",
   },

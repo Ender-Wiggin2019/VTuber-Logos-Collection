@@ -1,45 +1,43 @@
 import { CREDITS } from "@/data/credits";
-import { IBrand, IFilter, IFilterOption } from "@/data/type";
+import { FilterFunctionsMap, IBrand, IFilter, IFilterOption } from "@/data/type";
 import { CollapsibleList } from "./collapsible-list";
 import { BRANDS } from "@/data/brand";
 import { BrandCategory } from "@/data/categories";
 import { useState } from "react";
+import { Package, Users } from "lucide-react";
 
 type Props = {
-  brands: IBrand[];
-  onChangeFilter: (key: string, fn: (brands: IBrand[]) => IBrand[]) => void; // return a filter function
+  onChangeFilter: (filterFunctions: FilterFunctionsMap) => void;
 };
-export function FilterContainer({ brands, onChangeFilter }: Props) {
+export function FilterContainer({ onChangeFilter }: Props) {
   const [filterFunctions, setFilterFunctions] = useState<Map<string, (brands: IBrand[]) => IBrand[]>>(new Map());
 
+  // filter config
   const filterData: IFilter[] = [
     {
       filterHeader: "Author",
+      filterIcon: <Users className="h-4 w-4" />,
       filterOptions: authorOptions,
       initOptionNames: authorOptions.map((option) => option.name),
-      onClickOption: (selectedAuthors: Set<string>) => {
-        // 使用 createFilterByAuthors 创建一个过滤函数
-        const filterFunction = createFilterByAuthors(selectedAuthors);
-        // 通过 onChangeFilter 将过滤函数传递出去
-
-        filterFunctions.set("Author", filterFunction);
-        onChangeFilter("Author", filterFunction);
-      },
+      onClickOption: (selectedAuthors: Set<string>) => onClickOptionUpdate("Author", createFilterByAuthors, selectedAuthors),
     },
     {
       filterHeader: "Categories",
+      filterIcon: <Package className="h-4 w-4" />,
+
       filterOptions: categoriesOptions,
       initOptionNames: categoriesNames,
-      onClickOption: (selectedAuthors: Set<string>) => {
-        // 使用 createFilterByAuthors 创建一个过滤函数
-        const filterFunction = createFilterByCategories(selectedAuthors);
-
-        filterFunctions.set("Categories", filterFunction);
-        // 通过 onChangeFilter 将过滤函数传递出去
-        onChangeFilter("Categories", filterFunction);
-      },
+      onClickOption: (selectedCategories: Set<string>) => onClickOptionUpdate("Categories", createFilterByCategories, selectedCategories),
     },
   ];
+
+  const onClickOptionUpdate = (key: string, fn: (selectedAuthors: Set<string>) => (brands: IBrand[]) => IBrand[], options: Set<string>) => {
+    const filterFunction = fn(options);
+    const newFilterFunctions = new Map(filterFunctions);
+    newFilterFunctions.set(key, filterFunction);
+    setFilterFunctions(newFilterFunctions);
+    onChangeFilter(newFilterFunctions);
+  };
 
   return (
     <div className="flex flex-col gap-4">
@@ -73,9 +71,9 @@ function createFilterByAuthors(selectedAuthors: Set<string>) {
 // OPTIMIZE: ssg
 const categoriesOptions: IFilterOption[] = [];
 const categoriesNames = Object.values(BrandCategory);
-console.log(categoriesNames, authorOptions);
 for (const brand of BRANDS) {
-  const categories = brand.categories ? brand.categories : ["other"];
+  brand.categories = brand.categories ? brand.categories : [BrandCategory.OTHER];
+  const categories = brand.categories;
 
   for (const category of categories) {
     if (!categoriesOptions.map((a) => a.name).includes(category)) {
@@ -86,8 +84,8 @@ for (const brand of BRANDS) {
   }
 }
 
-function createFilterByCategories(selectedAuthors: Set<string>) {
+function createFilterByCategories(selectedCategories: Set<string>) {
   return (brands: IBrand[]): IBrand[] => {
-    return brands.filter((brand) => brand.logos.some((logo) => selectedAuthors.has(logo.credit.author)));
+    return brands.filter((brand) => brand.categories && brand.categories.some((category) => selectedCategories.has(category)));
   };
 }

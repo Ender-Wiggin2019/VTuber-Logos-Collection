@@ -27,8 +27,11 @@ export interface IFilterOption {
 }
 export interface IFilter {
   filterHeader: string;
+  filterIcon?: JSX.Element;
   filterOptions: IFilterOption[];
   initOptionNames: string[];
   // optionMapper: (options: IFilter["filterOptions"]) => string[],
   onClickOption?: (options: Set<string>) => void;
 }
+
+export type FilterFunctionsMap = Map<string, (brands: IBrand[]) => IBrand[]>;

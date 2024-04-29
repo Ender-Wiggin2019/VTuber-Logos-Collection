@@ -9,7 +9,7 @@ type Props = {
 
 export function ToolBar({ setSearch }: Props) {
   return (
-    <div className="fixed flex items-center z-50 space-x-4">
+    <div className="fixed flex items-center z-50 space-x-4 h-10">
       <SearchBar setSearch={setSearch} />
       <ToTopButton />
       <DarkModeToggle />
