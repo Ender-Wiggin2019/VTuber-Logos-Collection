@@ -15,5 +15,18 @@ export const IamSeries: IBrand = {
       credit: getCredit(Author.SAWARATSUKI),
       type: "english",
     },
+
+    {
+      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamDesigner!.png",
+      credit: getCredit(Author.SAWARATSUKI),
+      type: "designer"
+    },
+
+    {
+      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamDesigner!English.png",
+      credit: getCredit(Author.SAWARATSUKI),
+      type: "designer(EN)"
+    },
+
   ],
 };
