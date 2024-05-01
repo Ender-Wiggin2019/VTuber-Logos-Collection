@@ -5,6 +5,7 @@ import { _418Imateapot } from "./418Iamateapot";
 import { _503ServiceUnavailablepng } from "./503ServiceUnavailable.png";
 import { Angular } from "./Angular";
 import { ArchLinux } from "./ArchLinux";
+import { Bluesky } from "./Bluesky";
 import { C } from "./C";
 import { C0 } from "./C#";
 import { C1 } from "./C++";
@@ -23,6 +24,7 @@ import { GitHub } from "./GitHub";
 import { GitLab } from "./GitLab";
 import { Gnuemacs } from "./Gnuemacs";
 import { Go } from "./Go";
+import { HackClub } from "./HackClub";
 import { Haskell } from "./Haskell";
 import { Hono } from "./Hono";
 import { Html } from "./Html";
@@ -39,6 +41,7 @@ import { MSDOS } from "./MS-DOS";
 import { Mui } from "./Mui";
 import { Nextjs } from "./Next.js";
 import { Nodejs } from "./Node.js";
+import { NullPointerException } from "./NullPointerException";
 import { Photoshop } from "./Photoshop";
 import { Python } from "./Python";
 import { Qwikjs } from "./Qwik.js";
@@ -57,6 +60,7 @@ import { Twitter } from "./Twitter";
 import { TypeScript } from "./TypeScript";
 import { Ubuntu } from "./Ubuntu";
 import { UnityBlender } from "./UnityBlender";
+import { VercelAISDK } from "./VercelAISDK";
 import { Vim } from "./Vim";
 import { VisualStudio } from "./VisualStudio";
 import { VisualStudioCode } from "./VisualStudioCode";
@@ -74,6 +78,7 @@ export const ServiceLogos: IBrand[] = [
   _503ServiceUnavailablepng,
   Angular,
   ArchLinux,
+  Bluesky,
   C,
   C0,
   C1,
@@ -92,6 +97,7 @@ export const ServiceLogos: IBrand[] = [
   GitLab,
   Gnuemacs,
   Go,
+  HackClub,
   Haskell,
   Hono,
   Html,
@@ -108,6 +114,7 @@ export const ServiceLogos: IBrand[] = [
   Mui,
   Nextjs,
   Nodejs,
+  NullPointerException,
   Photoshop,
   Python,
   Qwikjs,
@@ -126,6 +133,7 @@ export const ServiceLogos: IBrand[] = [
   TypeScript,
   Ubuntu,
   UnityBlender,
+  VercelAISDK,
   Vim,
   VisualStudio,
   VisualStudioCode,
