@@ -1,0 +1,6 @@
+[submodule "public/ServiceLogos"]
+	path = public/ServiceLogos
+	url = https://github.com/SAWARATSUKI/ServiceLogos
+[submodule "public/ProgrammingVTuberLogos"]
+	path = public/ProgrammingVTuberLogos
+	url = https://github.com/Aikoyori/ProgrammingVTuberLogos
