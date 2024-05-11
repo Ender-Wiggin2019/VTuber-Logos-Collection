@@ -41,6 +41,12 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "_FrkanKrabudak_",
     twitter: "https://twitter.com/_FrkanKrabudak_",
   },
+  [Author.AlexB]: {
+    author: "AlexB",
+    pk: "Alex_with_a_B",
+    twitter: "https://twitter.com/Alex_with_a_B",
+    github: "https://github.com/xelab04",
+  },
 };
 
 export function getCredit(author: Author): ICredit {
