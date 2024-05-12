@@ -7,6 +7,8 @@ export enum Author {
   ENSO,
   hvpexe,
   FurkanKarabudak,
+  mkpoli,
+  AlexB,
 }
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
@@ -14,6 +16,10 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "Aikoyori",
     twitter: "https://twitter.com/Aikoyori",
     github: "https://github.com/Aikoyori",
+    license: {
+      url: "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md",
+      name: "CC BY-NC-SA 4.0",
+    },
   },
   [Author.AisuAsai]: {
     author: "Aisu Asai",
@@ -25,6 +31,12 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "sawaratsuki",
     twitter: "https://twitter.com/sawaratsuki1004",
     github: "https://github.com/SAWARATSUKI",
+    license: {
+      url: "https://github.com/SAWARATSUKI/KawaiiLogos",
+      name: "SAWARATSUKI's license",
+      description:
+        "SAWARATSUKI create a new repository for KawaiiLogos. The full list of logos is available in the repository. The logos not in this repository is temporary following license CC BY 4.0.",
+    },
   },
   [Author.ENSO]: {
     author: "ENSO",
@@ -46,6 +58,12 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "Alex_with_a_B",
     twitter: "https://twitter.com/Alex_with_a_B",
     github: "https://github.com/xelab04",
+  },
+  [Author.mkpoli]: {
+    author: "mkpoli",
+    pk: "mkpoli",
+    twitter: "https://twitter.com/mkpoli/status/1781931713939288337/photo/1'",
+    github: "https://github.com/mkpoli",
   },
 };
 

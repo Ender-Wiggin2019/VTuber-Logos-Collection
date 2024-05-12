@@ -8,7 +8,7 @@ export const Qwikjs: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Qwik.js/Qwik.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Qwik.js/Qwik.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

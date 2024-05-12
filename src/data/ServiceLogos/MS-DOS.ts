@@ -8,7 +8,7 @@ export const MSDOS: IBrand = {
   categories: [BrandCategory.OS],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/MS-DOS/MS-DOS.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/MS-DOS/MS-DOS.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

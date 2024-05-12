@@ -8,7 +8,7 @@ export const Ubuntu: IBrand = {
   categories: [BrandCategory.OS],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ubuntu/Ubuntu.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Ubuntu/Ubuntu.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

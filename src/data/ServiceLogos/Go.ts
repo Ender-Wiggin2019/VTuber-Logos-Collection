@@ -8,7 +8,7 @@ export const Go: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Go/Golang.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Go/Golang.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

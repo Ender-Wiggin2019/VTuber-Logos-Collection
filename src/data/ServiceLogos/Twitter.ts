@@ -5,7 +5,7 @@ export const Twitter: IBrand = {
   name: "Twitter",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Twitter/Twitter.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Twitter/Twitter.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

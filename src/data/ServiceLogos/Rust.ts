@@ -8,7 +8,7 @@ export const Rust: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rust/Rust.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Rust/Rust.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

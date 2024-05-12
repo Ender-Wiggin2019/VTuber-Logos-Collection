@@ -1,6 +1,5 @@
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const Bluesky: IBrand = {
   name: "Bluesky",
@@ -8,7 +7,7 @@ export const Bluesky: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Bluesky/Bluesky.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Bluesky/Bluesky.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

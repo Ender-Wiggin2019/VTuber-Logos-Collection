@@ -19,6 +19,11 @@ export interface ICredit {
   pk: string;
   twitter?: string;
   github?: string;
+  license?: {
+    name?: string;
+    url: string;
+    description?: string;
+  };
 }
 
 export interface IFilterOption {

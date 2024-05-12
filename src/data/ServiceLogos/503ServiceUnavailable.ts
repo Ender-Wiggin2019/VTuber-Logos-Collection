@@ -7,7 +7,7 @@ export const _503ServiceUnavailable: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/503ServiceUnavailable/ServiceUnavailable.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/503ServiceUnavailable/ServiceUnavailable.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

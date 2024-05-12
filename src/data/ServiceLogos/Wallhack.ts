@@ -5,7 +5,7 @@ export const Wallhack: IBrand = {
   name: "Wallhack",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Wallhack/WALLHACK.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Wallhack/WALLHACK.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

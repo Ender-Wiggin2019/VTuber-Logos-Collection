@@ -1,6 +1,6 @@
+import { BrandCategory } from "../categories";
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const VisualStudio: IBrand = {
   name: "Visual Studio",
@@ -8,13 +8,13 @@ export const VisualStudio: IBrand = {
   categories: [BrandCategory.IDE],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/VisualStudio/VisualStudio.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/VisualStudio/VisualStudio.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/VisualStudio/VisualStudioRound.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/VisualStudio/VisualStudioRound.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "round",
     },

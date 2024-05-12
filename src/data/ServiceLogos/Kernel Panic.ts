@@ -1,6 +1,5 @@
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const KernelPanic: IBrand = {
   name: "Kernel Panic",
@@ -8,7 +7,7 @@ export const KernelPanic: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Kernel Panic/KernelPanic.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Kernel Panic/KernelPanic.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

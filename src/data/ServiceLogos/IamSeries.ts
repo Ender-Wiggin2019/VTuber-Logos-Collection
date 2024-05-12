@@ -5,25 +5,25 @@ export const IamSeries: IBrand = {
   name: "IamSeries",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamProgrammer!.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/IamSeries/IamProgrammer!.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamProgrammerEnglish.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/IamSeries/IamProgrammerEnglish.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "english",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamDesigner!.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/IamSeries/IamDesigner!.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "designer",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/IamSeries/IamDesigner!English.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/IamSeries/IamDesigner!English.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "designer(EN)",
     },

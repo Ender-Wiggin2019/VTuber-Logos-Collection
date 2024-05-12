@@ -1,6 +1,6 @@
+import { BrandCategory } from "../categories";
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const VercelAISDK: IBrand = {
   name: "VercelAISDK",
@@ -8,7 +8,7 @@ export const VercelAISDK: IBrand = {
   categories: [BrandCategory.FRAMEWORK],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/VercelAISDK/AISDK.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/VercelAISDK/AISDK.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

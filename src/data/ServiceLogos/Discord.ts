@@ -8,7 +8,7 @@ export const Discord: IBrand = {
   categories: [BrandCategory.OTHER],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Discord/Discord.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Discord/Discord.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

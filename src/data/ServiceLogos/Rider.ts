@@ -5,7 +5,7 @@ export const Rider: IBrand = {
   name: "Rider",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rider/Rider.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Rider/Rider.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

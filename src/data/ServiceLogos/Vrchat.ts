@@ -5,7 +5,7 @@ export const Vrchat: IBrand = {
   name: "Vrchat",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vrchat/VRChat.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Vrchat/VRChat.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

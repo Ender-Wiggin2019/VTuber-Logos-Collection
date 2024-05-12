@@ -8,7 +8,7 @@ export const _404Notfound: IBrand = {
   categories: [BrandCategory.STATUS_CODE],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/404Notfound/NotFound.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/404Notfound/NotFound.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

@@ -8,7 +8,7 @@ export const Hono: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Hono/Hono.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Hono/Hono.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

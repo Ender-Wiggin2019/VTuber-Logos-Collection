@@ -2,14 +2,14 @@ import { BrandCategory } from "../categories";
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
 
-export const Nextjs: IBrand = {
-  name: "Next.js",
+export const Svelte: IBrand = {
+  name: "Svelte",
+  aliases: [],
   categories: [BrandCategory.FRAMEWORK],
-
   logos: [
     {
-      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Next.js/Next.js.png",
-      credit: getCredit(Author.SAWARATSUKI),
+      url: "https://raw.githubusercontent.com/mkpoli/VTuber-Styled-Logos/main/logos/Svelte/Svelte.png",
+      credit: getCredit(Author.mkpoli),
       type: "default",
     },
   ],

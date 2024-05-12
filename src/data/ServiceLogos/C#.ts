@@ -8,13 +8,13 @@ export const C0: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C%23/C%23.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/C%23/C%23.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C%23/C%23 Purple.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/C%23/C%23 Purple.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: " purple",
     },

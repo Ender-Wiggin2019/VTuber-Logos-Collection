@@ -8,7 +8,7 @@ export const Vue: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vue/Vue.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Vue/Vue.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

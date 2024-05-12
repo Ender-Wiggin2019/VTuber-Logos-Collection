@@ -9,7 +9,7 @@ export const TypeScript: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/TypeScript/TypeScript.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/TypeScript/TypeScript.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

@@ -5,7 +5,7 @@ export const Voicemod: IBrand = {
   name: "Voicemod",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Voicemod/Voicemod.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Voicemod/Voicemod.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

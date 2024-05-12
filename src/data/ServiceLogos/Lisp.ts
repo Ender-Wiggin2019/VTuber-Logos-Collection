@@ -1,6 +1,5 @@
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const Lisp: IBrand = {
   name: "Lisp",
@@ -8,7 +7,7 @@ export const Lisp: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Lisp/Lisp.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Lisp/Lisp.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
