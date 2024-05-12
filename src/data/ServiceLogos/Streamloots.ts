@@ -5,7 +5,7 @@ export const Streamloots: IBrand = {
   name: "Streamloots",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Streamloots/Streamloots.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Streamloots/Streamloots.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

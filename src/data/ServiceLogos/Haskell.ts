@@ -8,13 +8,13 @@ export const Haskell: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Haskell/Haskell.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell $.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Haskell/Haskell $.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: " $",
     },

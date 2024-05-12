@@ -8,7 +8,7 @@ export const Kotlin: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Kotlin/Kotlin.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Kotlin/Kotlin.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

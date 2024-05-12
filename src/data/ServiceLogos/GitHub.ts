@@ -7,7 +7,7 @@ export const GitHub: IBrand = {
   categories: [BrandCategory.DEV_TOOLS],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitHub/GitHub.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/GitHub/GitHub.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

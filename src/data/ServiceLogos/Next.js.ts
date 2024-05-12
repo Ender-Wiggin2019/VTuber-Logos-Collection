@@ -8,7 +8,7 @@ export const Nextjs: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Next.js/Next.js.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Next.js/Next.js.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

@@ -5,7 +5,7 @@ export const Gnuemacs: IBrand = {
   name: "Gnuemacs",
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Gnuemacs/GNUEmacs.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Gnuemacs/GNUEmacs.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

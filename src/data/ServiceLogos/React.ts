@@ -8,7 +8,7 @@ export const React: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/React/React.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/React/React.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

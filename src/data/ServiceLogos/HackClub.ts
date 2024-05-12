@@ -1,6 +1,5 @@
 import { Author, getCredit } from "../credits";
 import { IBrand } from "../type";
-import { BrandCategory } from "../categories";
 
 export const HackClub: IBrand = {
   name: "HackClub",
@@ -8,7 +7,7 @@ export const HackClub: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/HackClub/HackClub.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/HackClub/HackClub.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

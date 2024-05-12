@@ -7,13 +7,13 @@ export const Angular: IBrand = {
   categories: [BrandCategory.FRAMEWORK],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Angular/Angular.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
 
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular_Old.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Angular/Angular_Old.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "old",
     },

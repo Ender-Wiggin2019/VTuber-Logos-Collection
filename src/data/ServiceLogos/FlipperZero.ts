@@ -7,7 +7,7 @@ export const FlipperZero: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/FlipperZero/FlipperZero.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/FlipperZero/FlipperZero.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

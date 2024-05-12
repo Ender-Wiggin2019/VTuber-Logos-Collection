@@ -9,7 +9,7 @@ export const Clion: IBrand = {
 
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Clion/Clion.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Clion/Clion.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

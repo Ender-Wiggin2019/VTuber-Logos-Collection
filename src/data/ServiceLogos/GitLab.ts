@@ -7,7 +7,7 @@ export const GitLab: IBrand = {
   categories: [BrandCategory.DEV_TOOLS],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitLab/GitLab.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/GitLab/GitLab.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

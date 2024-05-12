@@ -7,7 +7,7 @@ export const Vim: IBrand = {
   categories: [BrandCategory.IDE],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vim/VIM.png",
+      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Vim/VIM.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },
