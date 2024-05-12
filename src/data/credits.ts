@@ -7,6 +7,7 @@ export enum Author {
   ENSO,
   hvpexe,
   FurkanKarabudak,
+  mkpoli,
 }
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
@@ -50,6 +51,12 @@ export const CREDITS: { [key in Author]: ICredit } = {
     author: "FurkanKarabudak",
     pk: "_FrkanKrabudak_",
     twitter: "https://twitter.com/_FrkanKrabudak_",
+  },
+  [Author.mkpoli]: {
+    author: "mkpoli",
+    pk: "mkpoli",
+    twitter: "https://twitter.com/mkpoli/status/1781931713939288337/photo/1'",
+    github: "https://github.com/mkpoli",
   },
 };
 
