@@ -1,18 +1,20 @@
 # VTuber Style Logo Collection
 
-This project is a collection of cute VTuber style logos. The credits can be founded in `src/data/credits.ts`. Thanks to their great works!
+This project is a collection of cute VTuber style logos. All credits can be founded in [`src/data/credits.ts`](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/blob/main/src/data/credits.ts). Thanks to their great works!
 
-- [SAWARATSUKI's ServiceLogos](https://github.com/SAWARATSUKI/ServiceLogos)
+- [SAWARATSUKI's KawaiiLogos](https://github.com/SAWARATSUKI/KawaiiLogos)
 - [Aikoyori's ProgrammingVTuberLogos](https://github.com/Aikoyori/ProgrammingVTuberLogos)
 
 Currently, all logos are shown on [https://vtuber-style-logos.vercel.app/](https://vtuber-style-logos.vercel.app/).
 
-![picgo-2024-04-23-000992](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/assets/49976407/c44dfe84-d9ce-415c-8349-3f886a1c5995)
+![picgo-2024-05-12-001063](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/assets/49976407/ce7afc00-c040-4dde-b766-37e04bb7577b)
+
 
 ## Feature
 
 1. filter by alias (k8s, vscode, etc.)
 2. filter by author (`/author/:author`)
+3. filter by autors and categories in home page
 
 ## How to Add Logos?
 
@@ -38,9 +40,10 @@ P.S. Ensure your Node.js version is > v18.17.0. Consider using NVM for easy vers
 
 - [ ] GitHub Actions for automation (currently I use `pnpm generate` to generate data)
 - [X] Alias filter such as k8s -> Kubernetes
-- [ ] Author filter (can filter by prams, but not shown on UI)
-- [ ] Category filter (programming languages, tools, etc.)
-- [ ] License declaration on each logo
-- [ ] Better UI for the whole page
+- [X] Author filter (can filter by prams, but not shown on UI)
+- [X] Category filter (programming languages, tools, etc.)
+- [X] License declaration on each logo
+- [X] Better UI for the whole page
+- [ ] Better logo register process (for a new user to upload a logo)
 
 Any PR is welcome!
