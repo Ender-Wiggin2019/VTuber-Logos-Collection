@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx,less,scss}",
+    "format": "prettier --write .",
     "generate:brand": "node generate/generate_brand_from_folder.js",
     "generate:download": "node generate/generate_brand_from_download.js",
     "generate:github": "node generate/generate_brand_from_github.js",
