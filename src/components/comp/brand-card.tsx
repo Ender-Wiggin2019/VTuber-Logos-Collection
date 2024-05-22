@@ -23,7 +23,7 @@ export function BrandCard({ brand }: BrandCardProps) {
   };
 
   return (
-    <Card className="w-full card-container">
+    <Card className="w-full grid grid-rows-card card-container">
       <CardHeader>
         <CardTitle>{brand.name}</CardTitle>
       </CardHeader>
@@ -39,7 +39,7 @@ export function BrandCard({ brand }: BrandCardProps) {
             }}
           />
         </div>
-        <div className="flex flex-wrap justify-start w-full gap-2">
+        <div className="flex flex-wrap justify-start w-full !mt-auto gap-2">
           {brand.logos.map((logo, index) => (
             <Button
               key={index}
