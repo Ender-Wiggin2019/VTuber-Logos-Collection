@@ -4,3 +4,6 @@
 [submodule "public/ProgrammingVTuberLogos"]
 	path = public/ProgrammingVTuberLogos
 	url = https://github.com/Aikoyori/ProgrammingVTuberLogos
+[submodule "public/CuteVtubingThing"]
+	path = public/CuteVtubingThing
+	url = https://github.com/murimurikyu/CuteVtubingThing

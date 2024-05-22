@@ -1,10 +1,11 @@
+import { CuteVtubingThing } from "./CuteVtubingThing";
 import { DownloadedLogos } from "./DownloadedLogos";
 import { ProgrammingVTuberLogos } from "./ProgrammingVTuberLogos";
 import { ServiceLogos } from "./ServiceLogos";
 import { FindViaTwitterLogos } from "./brands";
 import { IBrand } from "./type";
 
-const BRANDS: IBrand[] = [...ProgrammingVTuberLogos, ...FindViaTwitterLogos, ...ServiceLogos, ...DownloadedLogos];
+const BRANDS: IBrand[] = [...ProgrammingVTuberLogos, ...FindViaTwitterLogos, ...ServiceLogos, ...DownloadedLogos, ...CuteVtubingThing];
 
 BRANDS.sort((a, b) => a.name.localeCompare(b.name));
 

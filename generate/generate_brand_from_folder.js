@@ -8,6 +8,12 @@ const setting = require("./config/setting.json");
 const template = path.join(__dirname, "templates/brand.ejs");
 const indexTemplate = path.join(__dirname, "templates/index.ejs");
 
+/**
+ * get the tag name from brand and fileName
+ * @param {string} brand
+ * @param {string} fileName
+ * @returns
+ */
 function determineLogoType(brand, fileName) {
   let logoName = fileName.replace(".png", "").toLowerCase();
   logoName = logoName.replace("logo", "");
@@ -40,6 +46,52 @@ function determineLogoType(brand, fileName) {
   }
 
   return res;
+}
+
+async function generateBrandFromImage(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTHOR, validBrands, validBrandClassNames) {
+  if (brand.indexOf(".png") === -1) return;
+  const file = brand;
+  brand = brand.replace(".png", "");
+  const brandDir = path.join(sourceDir, brand);
+  try {
+    // console.log(AUTHOR);
+    let logos = [
+      {
+        url: `${DOWNLOAD_URL}${file.replace(/,/g, "%2C").replace(/\#/g, "%23").replace(/\+/g, "%2B")}`,
+        author: AUTHOR,
+        type: "default",
+      },
+    ];
+
+    validBrands.push(brand);
+    let className = convertToValidName(brand);
+
+    // make sure each is unique
+    if (!validBrandClassNames.includes(className)) {
+      validBrandClassNames.push(className);
+    } else {
+      let count = 0;
+      while (validBrandClassNames.includes(className + count)) {
+        count++;
+      }
+
+      className = className + count;
+      validBrandClassNames.push(className);
+    }
+
+    const data = {
+      logos: logos,
+      className: className,
+      name: brand,
+    };
+
+    const templateContent = await fs.readFile(template, "utf8");
+    const rendered = ejs.render(templateContent, data);
+
+    await writeFileIfNotExists(targetDir, brand, rendered);
+  } catch (err) {
+    console.error(`Error processing ${brand}:`, err);
+  }
 }
 
 async function generateBrandFile(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTHOR, validBrands, validBrandClassNames) {
@@ -96,13 +148,27 @@ async function generateBrandFile(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTH
   }
 }
 
-async function generateFiles(sourceDir, targetDir, DOWNLOAD_URL, AUTHOR, BRAND_COLLECTION_NAME) {
+async function writeBrandFile(data) {}
+
+/**
+ * generate both brand files and index.ts
+ * @param {*} sourceDir
+ * @param {*} targetDir
+ * @param {*} DOWNLOAD_URL
+ * @param {*} AUTHOR
+ * @param {*} BRAND_COLLECTION_NAME
+ */
+async function generateFiles(sourceDir, targetDir, DOWNLOAD_URL, AUTHOR, BRAND_COLLECTION_NAME, IMAGES_ONLY) {
   const validBrands = []; // brand name
   const validBrandClassNames = []; // class name
   try {
     const brands = await fs.readdir(sourceDir);
     for (const brand of brands) {
-      await generateBrandFile(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTHOR, validBrands, validBrandClassNames);
+      if (brand.indexOf(".png") && IMAGES_ONLY) {
+        await generateBrandFromImage(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTHOR, validBrands, validBrandClassNames);
+      } else {
+        await generateBrandFile(sourceDir, brand, targetDir, DOWNLOAD_URL, AUTHOR, validBrands, validBrandClassNames);
+      }
     }
 
     const indexTemplateContent = await fs.readFile(indexTemplate, "utf8");
@@ -140,6 +206,9 @@ async function writeFileIfNotExists(targetDir, brand, rendered) {
 }
 
 async function run() {
+  /**
+   * Each remote data source
+   */
   for (const dataSrc of setting) {
     const sourceDir = path.join(__dirname, "..", `public/${dataSrc.githubRepoName}`);
     const targetDir = path.join(__dirname, "..", `src/data/${dataSrc.githubRepoName}`);
@@ -147,10 +216,11 @@ async function run() {
     const DOWNLOAD_URL = dataSrc.downloadUrl;
     const AUTHOR = dataSrc.author;
     const BRAND_COLLECTION_NAME = dataSrc.githubRepoName;
+    const IMAGES_ONLY = dataSrc.imagesOnly ?? false; // some repos only have images
 
     await fs.mkdir(targetDir, { recursive: true });
 
-    await generateFiles(sourceDir, targetDir, DOWNLOAD_URL, AUTHOR, BRAND_COLLECTION_NAME);
+    await generateFiles(sourceDir, targetDir, DOWNLOAD_URL, AUTHOR, BRAND_COLLECTION_NAME, IMAGES_ONLY);
   }
 }
 

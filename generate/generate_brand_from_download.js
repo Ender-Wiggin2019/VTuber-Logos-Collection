@@ -6,14 +6,14 @@ const prettier = require("prettier");
 /**
  * Config
  */
-const sourceDir = path.join(__dirname, "..", "public/DownloadedLogos");
-const targetDir = path.join(__dirname, "..", "src/data/tmp_brands");
+const sourceDir = path.join(__dirname, "..", "public/CuteVtubingThing");
+const targetDir = path.join(__dirname, "..", "src/data/CuteVtubingThing");
 const template = path.join(__dirname, "templates/brand.ejs");
 const indexTemplate = path.join(__dirname, "templates/index.ejs");
 
-const DOWNLOAD_URL = "/DownloadedLogos/";
-const AUTHOR = "SAWARATSUKI";
-const BRAND_COLLECTION_NAME = "SAWARATSUKILogos";
+const DOWNLOAD_URL = "https://raw.githubusercontent.com/murimurikyu/CuteVtubingThing/main/";
+const AUTHOR = "murimurikyu";
+const BRAND_COLLECTION_NAME = "CuteVtubingThing";
 
 /**
  * Script

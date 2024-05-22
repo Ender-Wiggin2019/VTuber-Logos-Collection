@@ -28,8 +28,16 @@ export function BrandCard({ brand }: BrandCardProps) {
         <CardTitle>{brand.name}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col justify-center items-center space-y-2">
-        <div className="h-48 md:h-64">
-          <Image src={currentLogo.url} alt={brand.name} width={400} height={400} />
+        <div className="h-48 md:h-64 relative w-full">
+          <Image
+            src={currentLogo.url}
+            alt={brand.name}
+            sizes="300px"
+            fill
+            style={{
+              objectFit: "contain",
+            }}
+          />
         </div>
         <div className="grid grid-cols-4 gap-2">
           {brand.logos.map((logo, index) => (

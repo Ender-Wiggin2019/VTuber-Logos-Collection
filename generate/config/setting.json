@@ -8,5 +8,11 @@
     "githubRepoName": "ServiceLogos",
     "downloadUrl": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/",
     "author": "SAWARATSUKI"
+  },
+  {
+    "githubRepoName": "CuteVtubingThing",
+    "downloadUrl": "https://raw.githubusercontent.com/murimurikyu/CuteVtubingThing/main/",
+    "author": "murimurikyu",
+    "imagesOnly": true
   }
 ]

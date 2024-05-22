@@ -9,6 +9,7 @@ export enum Author {
   FurkanKarabudak,
   mkpoli,
   AlexB,
+  murimurikyu,
 }
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
@@ -62,8 +63,14 @@ export const CREDITS: { [key in Author]: ICredit } = {
   [Author.mkpoli]: {
     author: "mkpoli",
     pk: "mkpoli",
-    twitter: "https://twitter.com/mkpoli/status/1781931713939288337/photo/1'",
+    twitter: "https://twitter.com/mkpoli/status/1781931713939288337/photo/1",
     github: "https://github.com/mkpoli",
+  },
+  [Author.murimurikyu]: {
+    author: "murimurikyu",
+    pk: "murimurikyu",
+    twitter: "https://twitter.com/tsuki_setsuna",
+    github: "https://github.com/murimurikyu/CuteVtubingThing",
   },
 };
 

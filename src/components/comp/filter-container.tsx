@@ -49,9 +49,9 @@ export function FilterContainer({ onChangeFilter }: Props) {
 }
 
 // OPTIMIZE: ssg
-const authorOptions: IFilterOption[] = [];
+let authorOptions: IFilterOption[] = [];
 const authorNames = Object.values(CREDITS).map((credit) => credit.author);
-console.log(authorNames, authorOptions);
+// console.log(authorNames, authorOptions);
 for (const brand of BRANDS) {
   for (const logo of brand.logos) {
     if (!authorOptions.map((a) => a.name).includes(logo.credit.author)) {
@@ -61,6 +61,8 @@ for (const brand of BRANDS) {
     }
   }
 }
+authorOptions.sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
+console.log(authorOptions);
 
 function createFilterByAuthors(selectedAuthors: Set<string>) {
   return (brands: IBrand[]): IBrand[] => {
