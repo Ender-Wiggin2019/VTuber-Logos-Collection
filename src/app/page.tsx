@@ -93,7 +93,7 @@ export default function Dashboard() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
-              <div className="sm:hidden">
+              <div className="md:hidden">
                 <Link href="https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection" target="_blank" rel="noopener noreferrer">
                   <Github />
                 </Link>
@@ -121,7 +121,7 @@ export default function Dashboard() {
             </form> */}
             <ToolBar setSearch={setSearch} />
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden md:block">
             <Link href="https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection" target="_blank" rel="noopener noreferrer">
               <Github />
             </Link>
