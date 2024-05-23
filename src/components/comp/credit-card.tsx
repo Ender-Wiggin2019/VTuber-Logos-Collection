@@ -27,7 +27,7 @@ export function CreditCard({ credit }: Props) {
             </Link>
           )}
           {credit.license && (
-            <TooltipProvider>
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild ref={triggerRef} onClick={(event) => event.preventDefault()}>
                   <Info className="cursor-pointer" />
