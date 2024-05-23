@@ -93,7 +93,7 @@ export default function Dashboard() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
-              <div className="md:hidden">
+              <div className="md:hidden w-fit">
                 <Link href="https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection" target="_blank" rel="noopener noreferrer">
                   <Github />
                 </Link>
