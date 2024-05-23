@@ -9,7 +9,7 @@ type Props = {
 export function CreditCard({ credit }: Props) {
   return (
     <div className="w-full rounded-lg border bg-card text-muted-foreground shadow-sm py-2 px-3">
-      <div className="flex justify-between it">
+      <div className="flex flex-wrap gap-3 justify-between it">
         <Link className="flex items-center hover:underline hover:underline-offset-2" href={credit.twitter || credit.github || ""} rel="noopener noreferrer" target="_blank">
           @{credit.author}
         </Link>

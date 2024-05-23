@@ -23,7 +23,7 @@ export function BrandCard({ brand }: BrandCardProps) {
   };
 
   return (
-    <Card className="w-full card-container">
+    <Card className="w-full grid grid-rows-card card-container">
       <CardHeader>
         <CardTitle>{brand.name}</CardTitle>
       </CardHeader>
@@ -39,13 +39,13 @@ export function BrandCard({ brand }: BrandCardProps) {
             }}
           />
         </div>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="flex flex-wrap justify-start w-full !mt-auto gap-2">
           {brand.logos.map((logo, index) => (
             <Button
               key={index}
               variant="outline"
               size="sm"
-              className={cn("rounded-full text-xs min-w-20 h-8 w-full", { "border-zinc-600": currentLogoIndex === index })}
+              className={cn("rounded-full text-xs min-w-20 h-8", { "border-zinc-600": currentLogoIndex === index })}
               onClick={() => setCurrentLogoIndex(index)}
             >
               {logo.type || "default"}
