@@ -39,19 +39,21 @@ export function BrandCard({ brand }: BrandCardProps) {
             }}
           />
         </div>
-        <div className="flex flex-wrap justify-start w-full gap-2">
-          {brand.logos.map((logo, index) => (
-            <Button
-              key={index}
-              variant="outline"
-              size="sm"
-              className={cn("rounded-full text-xs min-w-20 h-8", { "border-zinc-600": currentLogoIndex === index })}
-              onClick={() => setCurrentLogoIndex(index)}
-            >
-              {logo.type || "default"}
-            </Button>
-          ))}
-        </div>
+        {brand.logos.length > 1 && (
+          <div className="flex w-full flex-wrap justify-start gap-2">
+            {brand.logos.map((logo, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                size="sm"
+                className={cn("h-8 min-w-20 rounded-full text-xs", { "border-zinc-600": currentLogoIndex === index })}
+                onClick={() => setCurrentLogoIndex(index)}
+              >
+                {logo.type || "default"}
+              </Button>
+            ))}
+          </div>
+        )}
         <CreditCard credit={currentLogo.credit} />
       </CardContent>
       <CardFooter className="flex justify-between">
