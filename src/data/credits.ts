@@ -10,6 +10,7 @@ export enum Author {
   mkpoli,
   AlexB,
   murimurikyu,
+  syke9p3,
 }
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
@@ -71,6 +72,15 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "murimurikyu",
     twitter: "https://twitter.com/tsuki_setsuna",
     github: "https://github.com/murimurikyu/CuteVtubingThing",
+  },
+  [Author.syke9p3]: {
+    author: "syke9p3",
+    pk: "syke9p3",
+    github: "https://github.com/syke9p3",
+    license: {
+      url: "https://github.com/syke9p3/Syke-VTuber-Icons/blob/main/LICENSE.md",
+      name: "CC BY-NC-SA 4.0",
+    },
   },
 };
 
