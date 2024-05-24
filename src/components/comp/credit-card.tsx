@@ -1,5 +1,6 @@
 import { ICredit } from "@/data/type";
 import { Github, Info, Twitter } from "lucide-react";
+import { useRef } from "react";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -7,6 +8,7 @@ type Props = {
   credit: ICredit;
 };
 export function CreditCard({ credit }: Props) {
+  const triggerRef = useRef(null);
   return (
     <div className="w-full rounded-lg border bg-card text-muted-foreground shadow-sm py-2 px-3">
       <div className="flex flex-wrap gap-3 justify-between it">
@@ -25,14 +27,18 @@ export function CreditCard({ credit }: Props) {
             </Link>
           )}
           {credit.license && (
-            <TooltipProvider>
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
-                <TooltipTrigger asChild>
+                <TooltipTrigger asChild ref={triggerRef} onClick={(event) => event.preventDefault()}>
                   <Info className="cursor-pointer" />
                 </TooltipTrigger>
-                <TooltipContent>
-                  <div className="w-40 sm:w-56 flex flex-col justify-start gap-4">
-                    {credit.license.name && <div className="font-bold text-lg">{credit.license.name}</div>}
+                <TooltipContent
+                  onPointerDownOutside={(event) => {
+                    if (event.target === triggerRef.current) event.preventDefault();
+                  }}
+                >
+                  <div className="flex w-40 flex-col justify-start gap-4 sm:w-56">
+                    {credit.license.name && <div className="text-lg font-bold">{credit.license.name}</div>}
                     {credit.license.description && <div className="">{credit.license.description}</div>}
 
                     <Link href={credit.license.url} target="_blank" rel="noopener noreferrer">
