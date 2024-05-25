@@ -1,5 +1,5 @@
 import { ICredit } from "@/data/type";
-import { Github, Info, Twitter } from "lucide-react";
+import { Github, Info, Twitter, Globe } from "lucide-react";
 import { useRef } from "react";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -19,6 +19,11 @@ export function CreditCard({ credit }: Props) {
           {credit.twitter && (
             <Link href={credit.twitter} target="_blank" rel="noopener noreferrer">
               <Twitter />
+            </Link>
+          )}
+          {credit.website && (
+            <Link href={credit.website} target="_blank" rel="noopener noreferrer">
+              <Globe />
             </Link>
           )}
           {credit.github && (
