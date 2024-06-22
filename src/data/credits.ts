@@ -12,7 +12,9 @@ export enum Author {
   murimurikyu,
   syke9p3,
   G2_Games,
+  C29H25N3O5,
 }
+
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
     author: "Aikoyori",
@@ -90,6 +92,16 @@ export const CREDITS: { [key in Author]: ICredit } = {
     github: "https://github.com/g2-games",
     license: {
       url: "https://github.com/G2-Games/fun-logos/blob/main/LICENSE",
+      name: "CC BY-NC-SA 4.0",
+    },
+  },
+  [Author.C29H25N3O5]: {
+    author: "C₂₉H₂₅N₃O₅",
+    pk: "C29H25N3O5",
+    website: "https://www.threads.net/@c29h25n3o5",
+    github: "https://github.com/C29H25N3O5",
+    license: {
+      url: "https://raw.githubusercontent.com/26F-Studio/cute-logos/main/LICENCE",
       name: "CC BY-NC-SA 4.0",
     },
   },
