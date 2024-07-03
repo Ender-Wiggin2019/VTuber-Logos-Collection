@@ -10,7 +10,11 @@ export enum Author {
   mkpoli,
   AlexB,
   murimurikyu,
+  syke9p3,
+  G2_Games,
+  C29H25N3O5,
 }
+
 export const CREDITS: { [key in Author]: ICredit } = {
   [Author.Aikoyori]: {
     author: "Aikoyori",
@@ -71,6 +75,35 @@ export const CREDITS: { [key in Author]: ICredit } = {
     pk: "murimurikyu",
     twitter: "https://twitter.com/tsuki_setsuna",
     github: "https://github.com/murimurikyu/CuteVtubingThing",
+  },
+  [Author.syke9p3]: {
+    author: "syke9p3",
+    pk: "syke9p3",
+    github: "https://github.com/syke9p3",
+    license: {
+      url: "https://github.com/syke9p3/Syke-VTuber-Icons/blob/main/LICENSE.md",
+      name: "CC BY-NC-SA 4.0",
+    },
+  },
+  [Author.G2_Games]: {
+    author: "G2 Games",
+    pk: "g2-games",
+    website: "https://g2games.dev/",
+    github: "https://github.com/g2-games",
+    license: {
+      url: "https://github.com/G2-Games/fun-logos/blob/main/LICENSE",
+      name: "CC BY-NC-SA 4.0",
+    },
+  },
+  [Author.C29H25N3O5]: {
+    author: "C₂₉H₂₅N₃O₅",
+    pk: "C29H25N3O5",
+    website: "https://www.threads.net/@c29h25n3o5",
+    github: "https://github.com/C29H25N3O5",
+    license: {
+      url: "https://raw.githubusercontent.com/26F-Studio/cute-logos/main/LICENCE",
+      name: "CC BY-NC-SA 4.0",
+    },
   },
 };
 

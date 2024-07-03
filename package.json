@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx,less,scss}",
+    "format": "prettier --write .",
     "generate:brand": "node generate/generate_brand_from_folder.js",
     "generate:download": "node generate/generate_brand_from_download.js",
     "generate:github": "node generate/generate_brand_from_github.js",
@@ -45,6 +45,7 @@
     "node-fetch": "2.6.7",
     "postcss": "^8",
     "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

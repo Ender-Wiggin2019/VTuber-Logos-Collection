@@ -23,12 +23,12 @@ export function BrandCard({ brand }: BrandCardProps) {
   };
 
   return (
-    <Card className="w-full card-container">
+    <Card className="w-full grid grid-rows-card card-container">
       <CardHeader>
         <CardTitle>{brand.name}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col justify-center items-center space-y-2">
-        <div className="h-48 md:h-64 relative w-full">
+        <div className="relative mb-auto h-48 w-full md:h-64">
           <Image
             src={currentLogo.url}
             alt={brand.name}
@@ -40,19 +40,21 @@ export function BrandCard({ brand }: BrandCardProps) {
             }}
           />
         </div>
-        <div className="grid grid-cols-4 gap-2">
-          {brand.logos.map((logo, index) => (
-            <Button
-              key={index}
-              variant="outline"
-              size="sm"
-              className={cn("rounded-full text-xs min-w-20 h-8 w-full", { "border-zinc-600": currentLogoIndex === index })}
-              onClick={() => setCurrentLogoIndex(index)}
-            >
-              {logo.type || "default"}
-            </Button>
-          ))}
-        </div>
+        {brand.logos.length > 1 && (
+          <div className="flex w-full flex-wrap justify-start gap-2">
+            {brand.logos.map((logo, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                size="sm"
+                className={cn("h-8 min-w-20 rounded-full text-xs", { "border-zinc-600": currentLogoIndex === index })}
+                onClick={() => setCurrentLogoIndex(index)}
+              >
+                {logo.type || "default"}
+              </Button>
+            ))}
+          </div>
+        )}
         <CreditCard credit={currentLogo.credit} />
       </CardContent>
       <CardFooter className="flex justify-between">
