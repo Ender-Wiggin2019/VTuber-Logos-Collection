@@ -34,6 +34,7 @@ export function BrandCard({ brand }: BrandCardProps) {
             alt={brand.name}
             sizes="300px"
             fill
+            unoptimized={true} 
             style={{
               objectFit: "contain",
             }}
