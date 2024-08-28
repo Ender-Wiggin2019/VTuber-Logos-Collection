@@ -13,6 +13,7 @@ export enum Author {
   syke9p3,
   G2_Games,
   C29H25N3O5,
+  Shiroame_Kusu,
 }
 
 export const CREDITS: { [key in Author]: ICredit } = {
@@ -102,6 +103,14 @@ export const CREDITS: { [key in Author]: ICredit } = {
     github: "https://github.com/C29H25N3O5",
     license: {
       url: "https://raw.githubusercontent.com/26F-Studio/cute-logos/main/LICENCE",
+      name: "CC BY-NC-SA 4.0",
+    },
+  },[Author.Shiroame_Kusu]: {
+    author: "Shiroame Kusu",
+    pk: "Shiroame_Kusu",
+    github: "https://github.com/Shiroiame-Kusu",
+    license: {
+      url: "https://raw.githubusercontent.com/Shiroiame-Kusu/ProgrammingVTuberLogos-Windows/main/LICENSE",
       name: "CC BY-NC-SA 4.0",
     },
   },
