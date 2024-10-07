@@ -14,6 +14,7 @@ export enum Author {
   G2_Games,
   C29H25N3O5,
   Shiroame_Kusu,
+  anwarachilles
 }
 
 export const CREDITS: { [key in Author]: ICredit } = {
@@ -111,6 +112,15 @@ export const CREDITS: { [key in Author]: ICredit } = {
     github: "https://github.com/Shiroiame-Kusu",
     license: {
       url: "https://raw.githubusercontent.com/Shiroiame-Kusu/ProgrammingVTuberLogos-Windows/main/LICENSE",
+      name: "CC BY-NC-SA 4.0",
+    },
+  },
+  [Author.anwarachilles]: {
+    author: "Anwar Achilles",
+    pk: "anwarachilles",
+    github: "https://github.com/anwarachilles",
+    license: {
+      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/LICENSE",
       name: "CC BY-NC-SA 4.0",
     },
   },
