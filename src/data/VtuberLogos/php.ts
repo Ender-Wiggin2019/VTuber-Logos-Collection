@@ -7,21 +7,15 @@ export const Php: IBrand = {
   categories: [BrandCategory.LANGUAGE],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php/default.png",
+      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/default.png",
       credit: getCredit(Author.anwarachilles),
       type: "default",
     },
-
+    
     {
-      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php/bordered-light.png",
+      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/shadowed.png",
       credit: getCredit(Author.anwarachilles),
-      type: "bordered_light",
-    },
-
-    {
-      url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php/bordered-dark.png",
-      credit: getCredit(Author.anwarachilles),
-      type: "bordered_dark",
-    },
+      type: "shadowed",
+    }
   ],
 };
