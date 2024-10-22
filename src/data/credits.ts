@@ -14,7 +14,8 @@ export enum Author {
   G2_Games,
   C29H25N3O5,
   Shiroame_Kusu,
-  anwarachilles
+  anwarachilles,
+  NatchaLatteOfficial
 }
 
 export const CREDITS: { [key in Author]: ICredit } = {
@@ -123,6 +124,13 @@ export const CREDITS: { [key in Author]: ICredit } = {
       url: "https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/LICENSE",
       name: "CC BY-NC-SA 4.0",
     },
+  },
+  [Author.NatchaLatteOfficial]: {
+    author: "NatchaLatte Official",
+    pk: "NatchaLatteOfficial",
+    website: "https://natchalatte-official.carrd.co/",
+    twitter: "https://x.com/NatchaLatteDev",
+    github: "https://github.com/NatchaLatte",
   },
 };
 
