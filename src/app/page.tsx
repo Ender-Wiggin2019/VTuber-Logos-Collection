@@ -131,7 +131,7 @@ export default function Dashboard() {
           </div>
 
             {limitedData.isCut && (
-              <Button className="mb-4 h-16 text-2xl bg-white/80 hover:bg-white"onClick={handleLimitChange}>View More</Button>)
+              <Button className="mb-4 h-16 text-2xl"onClick={handleLimitChange}>View More</Button>)
               }
         </main>
       </div>
