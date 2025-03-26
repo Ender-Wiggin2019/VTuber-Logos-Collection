@@ -62,7 +62,6 @@ for (const brand of BRANDS) {
   }
 }
 authorOptions.sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
-console.log(authorOptions);
 
 function createFilterByAuthors(selectedAuthors: Set<string>) {
   return (brands: IBrand[]): IBrand[] => {

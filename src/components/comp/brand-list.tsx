@@ -4,11 +4,11 @@ import { BrandCardList } from "@/components/comp/card-list";
 import { ToolBar } from "@/components/comp/tool-bar";
 import { BRANDS } from "@/data/brand";
 import { IBrand } from "@/data/type";
-import { filterByAuthor } from "@/lib/utils";
+import { cn, filterByAuthor } from "@/lib/utils";
 import Fuse from "fuse.js";
 import { Github } from "lucide-react";
 import Link from "next/link";
-import { Suspense, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 
 type Props = {
   brands: IBrand[];
@@ -16,20 +16,29 @@ type Props = {
 export default function BrandList({ brands }: Props) {
   const [search, setSearch] = useState<string>("");
 
-  const fuseOptions = {
-    keys: ["name", "aliases"],
-    includeScore: true,
-    threshold: 0.1,
-  };
+  const filteredBrands = useMemo(() => {
+    const lowercaseSearch = search.toLowerCase();
+    if (!lowercaseSearch) {
+      return brands;
+    }
 
-  const fuse = new Fuse(brands, fuseOptions);
+    const res = brands.filter((brand) => {
+      if (brand.name.toLowerCase().includes(lowercaseSearch)) {
+        return true;
+      }
 
-  const results = fuse.search(search);
+      if (brand?.aliases?.some((alias) => alias.toLowerCase().includes(lowercaseSearch))) {
+        return true;
+      }
 
-  const filteredBrands = search ? results.map((result) => result.item) : brands;
+      return false;
+    });
+    return res;
+  }, [search, brands]);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-4 space-y-4 w-full max-w-7xl">
-      <div className="flex items-center w-full space-x-2 py-2">
+    <main className="flex min-h-screen w-full max-w-7xl flex-col items-center justify-start space-y-4 p-4">
+      <div className="flex w-full items-center space-x-2 py-2">
         <ToolBar setSearch={setSearch} />
         <div className="flex w-full justify-end space-x-4 text-muted-foreground">
           {/* <Link href="" target="_blank" rel="noopener noreferrer">
@@ -40,9 +49,30 @@ export default function BrandList({ brands }: Props) {
           </Link>
         </div>
       </div>
-      <div className="w-full z-10 items-center justify-between text-sm lg:flex">
+      <div className="z-10 w-full items-center justify-between text-sm lg:flex">
+        <LoadingSpinner />
+        1111
         <BrandCardList brands={filteredBrands} />
       </div>
     </main>
   );
 }
+
+export const LoadingSpinner = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn("animate-spin", className)}
+    >
+      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+    </svg>
+  );
+};

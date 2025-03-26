@@ -9,12 +9,11 @@ Currently, all logos are shown on [https://vtuber-style-logos.vercel.app/](https
 
 ![picgo-2024-05-12-001063](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/assets/49976407/ce7afc00-c040-4dde-b766-37e04bb7577b)
 
-
 ## Feature
 
 1. filter by alias (k8s, vscode, etc.)
 2. filter by author in route (`/author/:author`)
-3. filter by autors and categories in home page
+3. filter by authors and categories in home page
 
 ## Development
 
@@ -50,7 +49,7 @@ Here're 4 steps:
 - aliases: alias for a brand name
 - categories: brand category, it can have multiple categories, but currently you can only use the categories defined in `Enum`.
 
-Also don't forget to import this file to an `index.ts` file for centralised management. 
+Also don't forget to import this file to an `index.ts` file for centralised management.
 ![image](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/assets/49976407/d2737afa-3e9f-416b-a172-a44608fc7531)
 
 ### Upload multiple logos via GitHub repository
@@ -59,7 +58,7 @@ If you have many logos and want to upload in one click, then this method is help
 
 1. Create and upload your images to GitHub repository similar to [KawaiiLogos](https://github.com/SAWARATSUKI/KawaiiLogos). It's preferred to use the `folder->image` structure since it can contained multiple logos in one brand file. If you only have one logo for each brand, you can only upload images. Also, you need to clone your repository to public as a submodule.
 
-2. Add setting in [`setting.json`](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/blob/main/generate/config/setting.json). 
+2. Add setting in [`setting.json`](https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection/blob/main/generate/config/setting.json).
 ```json
   {
     "githubRepoName": "CuteVtubingThing",
@@ -78,7 +77,7 @@ If you have many logos and want to upload in one click, then this method is help
 
 Previously I choose the format that directly write down each file (i.e. `vscode.ts`) for each brand instead of an automatically API to genrate images dynamically, because I want each logo can be maintained in a easier way. For example, some brand has aliases, such as vs code and k8s, using static files for managing can be a better way.
 
-Besides, since this project's architecture is created only in few hours, there're indeed many aspect I didn't consider it well. For example, I give each logo an author attribute, because I thought one brand may have logos designed by different authors. However, soon I found out people prefer unique cards from different authors instead of a mixed card with so many buttons. There're some more details that can be improved, maybe in the future I would fix them. 
+Besides, since this project's architecture is created only in few hours, there're indeed many aspect I didn't consider it well. For example, I give each logo an author attribute, because I thought one brand may have logos designed by different authors. However, soon I found out people prefer unique cards from different authors instead of a mixed card with so many buttons. There're some more details that can be improved, maybe in the future I would fix them.
 
 ## TODO
 
