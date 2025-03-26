@@ -70,6 +70,9 @@ dependencies:
     version: 1.0.7(tailwindcss@3.4.13)
 
 devDependencies:
+  '@types/lodash':
+    specifier: ^4.17.16
+    version: 4.17.16
   '@types/node':
     specifier: ^20
     version: 20.16.6
@@ -1038,6 +1041,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash@4.17.16:
+    resolution: {integrity: sha512-HX7Em5NYQAXKW+1T+FiuG27NGwzJfCX3s1GjOa7ujxZa52kjJLOr4FUxT+giF6Tgxv1e+/czV/iTtBw27WTU9g==}
     dev: true
 
   /@types/node@20.16.6:
