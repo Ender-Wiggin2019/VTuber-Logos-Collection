@@ -1,3 +1,10 @@
+/*
+ * @Author: Ender-Wiggin
+ * @Date: 2024-09-25 00:13:19
+ * @LastEditors: Ender-Wiggin
+ * @LastEditTime: 2025-04-02 02:15:16
+ * @Description:
+ */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -8,6 +15,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { CreditCard } from "./credit-card";
 import { IBrand } from "@/data/type";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 type BrandCardProps = {
   brand: IBrand;
@@ -29,11 +38,15 @@ export function BrandCard({ brand }: BrandCardProps) {
       </CardHeader>
       <CardContent className="flex flex-col justify-center items-center space-y-2">
         <div className="relative mb-auto h-48 w-full md:h-64">
-          <Image
+          <LazyLoadImage
             src={currentLogo.url}
             alt={brand.name}
             sizes="300px"
-            fill
+            effect="opacity"
+            wrapperProps={{
+                // If you need to, you can tweak the effect transition using the wrapper style.
+                style: {transitionDelay: "0.3s"},
+            }}
             // unoptimized={true}
             style={{
               objectFit: "contain",

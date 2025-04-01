@@ -1,3 +1,10 @@
+/*
+ * @Author: Ender-Wiggin
+ * @Date: 2024-09-25 00:13:19
+ * @LastEditors: Ender-Wiggin
+ * @LastEditTime: 2025-04-02 02:13:44
+ * @Description:
+ */
 import { Search } from "lucide-react";
 import { Input } from "../ui/input";
 import { debounce } from "lodash";
@@ -10,7 +17,7 @@ export function SearchBar({ setSearch }: Props) {
 
   const handleChange = debounce((e) => {
     setSearch(e.target.value);
-  }, 300);
+  }, 500);
 
   return (
     <div className="relative">

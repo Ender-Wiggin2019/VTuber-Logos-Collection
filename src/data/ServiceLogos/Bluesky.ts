@@ -7,7 +7,7 @@ export const Bluesky: IBrand = {
   categories: [],
   logos: [
     {
-      url: "https://raw.githubusercontent.com/Ender-Wiggin2019/ServiceLogos/main/Bluesky/Bluesky.png",
+      url: "https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/refs/heads/main/Bluesky/BlueSky.png",
       credit: getCredit(Author.SAWARATSUKI),
       type: "default",
     },

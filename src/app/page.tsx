@@ -21,7 +21,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { IBrand } from "@/data/type";
 import Link from "next/link";
 
-const INIT_LIMIT = 18;
+const INIT_LIMIT = 12;
 
 export default function Dashboard() {
   const [brands, setBrands] = useState<IBrand[]>(BRANDS);
