@@ -8,8 +8,8 @@ import { IBrand } from "../type";
 
 export const VTuberLogos: IBrand[] = [
     LinuxMint,
-    Rune,
     Php,
-    NestJS,
     CodeIgniter,
+    NestJS,
+    Rune
 ];
